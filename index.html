@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Curriculum Vitae - Leonardo Axel Ortiz Zaragoza</title>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <style>
+      body {
+        font-family: Rockwell, Arial;
+        margin: 10%;
+        margin-top: 15px;
+        background: rgb(255, 0, 0);
+        background: linear-gradient(45deg, rgba(255, 0, 0, 1) 0%, rgba(255, 0, 0, 0) 100%),
+          repeating-radial-gradient(circle at 100% 0, transparent 0, #ffffff 2%),
+          repeating-linear-gradient(#ffb0b055, #ffb0b0);
+        background-size: 100vw 150vh;
+        background-attachment: fixed;
+        animation: expandBackground 10s infinite alternate;
+        animation-timing-function: cubic-bezier(.58, 0, .42, 1);
+      }
+
+      @keyframes expandBackground {
+        0% {
+          background-size: 100vw 150vh;
+        }
+
+        100% {
+          background-size: 130vw 195vh;
+        }
+      }
+
+      header {
+        display: block;
+        float: left;
+        width: 100%;
+        overflow: auto;
+        margin-left: 15px;
+      }
+
+      #photo {
+        float: right;
+        align-content: flex-end;
+      }
+
+      img.photo {
+        width: 200px;
+        border-radius: 50%;
+        padding: 10px;
+        margin: 10px;
+        border: 10px solid #F44;
+      }
+
+      article {
+        display: block;
+        margin-left: 15px;
+        float: left;
+      }
+
+      footer {
+        display: block;
+        margin-left: 15px;
+        float: left;
+        align-content: flex-start;
+        width: calc(100% - 12.5px);
+      }
+
+      #side {
+        width: 30%;
+      }
+
+      #main {
+        float: right;
+        align-content: flex-start;
+        width: calc(70% - 30px);
+        /* Resta el ancho del elemento con ID "side" */
+      }
+
+      #info {
+        width: calc(100% - 330px);
+      }
+
+      #contact-info {
+        min-width: 100%;
+      }
+
+      #other {
+        float: right;
+        min-width: 20%
+      }
+
+      #title {
+        font-family: Arial;
+        font-size: 20px;
+        font-weight: bold;
+        color: #EEE;
+      }
+
+      a {
+        text-decoration: none;
+        color: #000;
+      }
+
+      section {
+        background-color: #FFF;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        padding: 20px;
+        margin-bottom: 15px;
+      }
+
+      h1 {
+        font-family: Arial;
+        color: #333;
+        margin-bottom: 20px;
+        font-size: 50px;
+      }
+
+      h2 {
+        font-style: italic;
+        font-family: Arial;
+        color: #444;
+        margin-bottom: 20px;
+        font-size: 30px;
+      }
+
+      h3 {
+        font-family: Arial;
+        text-transform: uppercase;
+        border-bottom: 5px solid #F44;
+      }
+
+      #upper {
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+      #dist {
+        font-weight: bold;
+      }
+
+      label {
+        display: block;
+        margin: 5px;
+        margin-top: 10px;
+        font-weight: bold;
+      }
+
+      .navBar {
+        display: flex;
+        justify-content: center;
+      }
+
+      .navBar ul {
+        /*display: block;*/
+        width: calc(25% - 15px);
+        display: flex;
+        float: left;
+        list-style: none;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+      }
+
+      .navBar li {
+        min-width: calc(100% - 20px);
+        margin-right: 10px;
+        padding: 10px;
+        text-align: center;
+        justify-content: center;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+
+      .navBar a {
+        text-decoration: none;
+        color: #000;
+        padding: 5px;
+      }
+
+      .navBar img {
+        margin: 5px;
+        padding: 5px;
+        width: 30px;
+      }
+
+      .navBar li:hover {
+        background-color: #F44;
+      }
+
+      form {
+        width: 70%;
+        margin: 0 auto;
+      }
+
+      label {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+      }
+
+      /* Estilo para el elemento input */
+      input {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+        outline: none;
+        transition: border-color 0.3s ease-in-out;
+      }
+
+      input:focus {
+        border-color: #5c94ff;
+      }
+
+      /* Estilo para el elemento textarea */
+      textarea {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+        outline: none;
+        transition: border-color 0.3s ease-in-out;
+      }
+
+      textarea:focus {
+        border-color: #5c94ff;
+      }
+
+      button {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        padding: 10px 20px;
+        background-color: #F44;
+        color: #FFF;
+        font-size: 16px;
+        font-weight: bold;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color .15s linear;
+      }
+
+      button:focus {
+        outline: none;
+      }
+
+      button:hover {
+        background-color: #D22;
+      }
+
+      button::-moz-focus-inner {
+        border: 0;
+      }
+
+      button:active {
+        transform: translateY(0.1em);
+      }
+
+      .exploding,
+      .exploding:focus,
+      .exploding:hover {
+        background: transparent;
+        color: transparent;
+      }
+
+      .exploding {
+        pointer-events: none;
+        position: relative;
+        will-change: transform;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      .particle {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      .particle--debris {
+        background: #255ff4;
+      }
+
+      .particle--fire {
+        border-radius: 50%;
+      }
+
+      @media (max-width: 880px) {
+        #main {
+          float: left;
+          min-width: 100%;
+        }
+        #side, footer   {
+          min-width: 100%;
+        }
+        #info{
+          width: 90%;
+        }
+        #photo{
+          min-width: 100%;
+          margin: 0 auto;
+          text-align: center;
+        }
+      img.photo {
+        width: 30%;
+      }
+      .navBar ul {
+        /*display: block;*/
+        width: 100%;
+        display: inline-block;
+        list-style: none;
+      }
+      .navBar li {
+        min-width: calc(100% - 20px);
+        padding: 10px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <article id="info">
+        <h1>Leonardo Axel Ortiz Zaragoza</h1>
+        <h2>Curriculum Vitae</h2>
+        <p id="title">ESTUDIANTE EN INGENIERÍA EN SISTEMAS COMPUTACIONALES | ESCOM IPN</p>
+      </article>
+      <article id="photo">
+        <img class="photo" src="foto.jpg" alt="Fotografia">
+      </article>
+    </header>
+    <article id="main">
+      <section>
+        <h3>RESUMEN</h3>
+        <p>
+          Soy un estudiante de Ingeniería en Sistemas Computacionales en la Escuela Superior de Cómputo del Instituto Politécnico Nacional, actualmente en el 9º semestre. Mi pasión por la programación me ha llevado a explorar nuevas tecnologías. Constantemente busco desafíos que me saquen de mi zona de confort y me permitan aprender y crecer.
+          Mi experiencia incluye proyectos de desarrollo web, aplicaciones, backend, bases de datos, redes, servicios en la nube y microcontroladores. 
+          Soy un aprendiz rápido, me adapto fácilmente a diferentes entornos de trabajo y tengo la capacidad de analizar problemas desde diferentes perspectivas. 
+          Fuera de la escuela, disfruto de los videojuegos, tocar la guitarra y aprender cosas nuevas, como patinar.</p>
+      </section>
+      <section>
+        <h3>FORMACIÓN</h3>
+        <p>
+        <div id="upper">
+          <a href="http://www.enms-irapuato.ugto.mx/" target="contenido">2019 • ESCUELA DE NIVEL MEDIO SUPERIOR DE IRAPUATO • UNIVERSIDAD DE GUANAJUATO</a>
+        </div> Bachillerato general orientado a ingenierías. </p>
+        <p>
+        <div id="upper">
+          <a href="https://www.escom.ipn.mx/" target="contenido">EN CURSO 9° SEMESTRE • ESCUELA SUPERIOR DE CÓMPUTO • INSTITUTO POLITÉCNICO NACIONAL</a>
+        </div> Ingeniería en Sistemas Computacionales. </p>
+      </section>
+
+
+      <section>
+        <h3>EXPERIENCIA</h3>
+        <p><h4>Desarrollo de Software:</h4></p>
+        <ol>
+            <li>
+                <h4><a href="https://drive.google.com/file/d/1oOotgQFq6Yp-eZvBnBDyT13NRzQxb8cl/view?usp=sharing">Primer lugar en Expo ESCOM 2023</a> - Ingeniería de Software - <a id="upper" href="http://circuittoolbox.com/" target="_blank">CircuitToolbox.com</a></h4>
+                <ul>
+                    <li>Desarrollo de una página web con utilidades y calculadoras básicas en electrónica.</li>
+                    <li>Frontend implementado en Next.JS para una experiencia de usuario responsiva.</li>
+                    <li>Desarrollo de un microservicio en Golang para la <a id="dist" href="http://circuittoolbox.com/calculadora-de-amplificacion" target="_blank">calculadora de amplificación</a>, con comunicación a través de sockets TCP.</li>
+                    <li>Despliegue exitoso en una máquina virtual en AWS.</li>
+                </ul>
+            </li>
+            <li>
+                <h4>Vóltmetro Inalámbrico con Interfaz Web</h4>
+                <ul>
+                    <li>Diseño de un sensor con protección de circuito para medir voltajes más allá de los medibles, 0V - 60V.</li>
+                    <li>Digitalización de la señal y la serialización mediante el microcontrolador PIC16F628A.</li>
+                    <li>Desarrollo de un microservicio con cliente Bluetooth y un servidor TCP para la distribución de los valores de la señal del vóltmetro. </li>
+                    <li>Creación de una interfaz web utilizando Next.js para acceder y visualizar los datos en una red local.</li>
+                </ul>
+            </li>
+            <li>
+                <h4><a href="https://drive.google.com/file/d/1oIJ1tpl7-OPesHTgqGbgsxoADEEbZiUZ/view?usp=sharing">Semifinalista Hackathon Talent Land 2023</a> – Track Salud Digna</h4>
+                <ul>
+                    <li>Utilización de la API ChatGPT 3.5 para recomendar recetas nutritivas e incentivar la comunicación con nutriólogos y expertos en salud.</li>
+                    <li>Integración de una base de datos de ingredientes y recetas para proporcionar recomendaciones precisas.</li>
+                </ul>
+            </li>
+            <li>
+                <h4>Desarrollo de un Cañón Controlado por un Microcontrolador DSPIC y Aplicación Android</h4>
+                <ul>
+                    <li>Diseño y desarrollo de un cañón controlado por un microcontrolador DSPIC.</li>
+                    <li>Desarrollo de una aplicación Android que se comunica con el cañón a través de sockets Bluetooth.</li>
+                </ul>
+            </li>
+            <li>
+                <h4>Pseudotraductor de una Palabra Inglés-Español con Detección de Errores Evolutiva</h4>
+                <ul>
+                    <li>Creación de un sistema capaz de traducir una palabra de inglés a español.</li>
+                    <li>Implementación del frontend en Next.js y del microservicio en Python, que utiliza la lógica de procesamiento de palabras y comunicación por JSON.</li>
+                    <li>Utilización de la distancia de Levenshtein para detectar errores, contabilizarlos y mejorar las predicciones.</li>
+                    <li>Configuración de una base de datos en PostgreSQL 15 para el almacenamiento de datos.</li>
+                </ul>
+            </li>
+            <li>
+                <h4>Catálogo de Plantas y sus cuidados</h4>
+                <ul>
+                    <li>Diseño y desarrollo de una aplicación para Android basada en Java que proporciona información detallada sobre diferentes tipos de plantas y sus cuidados correspondientes.</li>
+                </ul>
+            </li>
+            <li>
+                <h4>Página Web de Comercio Electrónico</h4>
+                <ul>
+                    <li>Desarrollo y documentación de una página web de comercio electrónico para una agencia de autos ficticia.</li>
+                </ul>
+            </li>
+            <li>
+                <h4>Bot para Discord</h4>
+                <ul>
+                    <li>Desarzrollo de un bot para Discord utilizando Node.js capaz de procesar texto y generar voz mediante una API.</li>
+                </ul>
+            </li>
+        </ol>
+
+        <p><h4>Experiencia en Sistemas Computacionales:</h4></p>
+        <ul>
+            <li>Diseño y mantenimiento de topologías de red, incluyendo routers, switches, puntos de acceso y balanceadores de carga, con un enfoque principal en productos Omada.</li>
+            <li>Configuración de arreglos RAID para la gestión eficiente del almacenamiento de datos.</li>
+            <li>Configuración y mantenimiento de servidores FTP para facilitar la transferencia de archivos en una subred.</li>
+            <li>Diseño y configuración de redes para máquinas virtuales en entornos de nube como Microsoft Azure y Amazon Web Services.</li>
+        </ul>
+      </section>
+
+    </article>
+
+    <article id="side">
+      <section>
+        <h3>OBJETIVO PROFESIONAL</h3>
+        <p>
+          Busco ampliar mis conocimientos y habilidades en el área de Sistemas Computacionales para definir el rumbo de mi educación y vida profesional. Mi objetivo es llegar a dirigir y contribuir en el diseño, desarrollo y mejora de sistemas mientras sigo aprendiendo y adaptándome a las últimas tendencias tecnológicas.
+        </p>
+      </section>
+      <section>
+        <h3>HABILIDADES</h3>
+        <ul>
+          <li>Programación en múltiples lenguajes, incluyendo C, Golang, Python, Java, JavaScript y Ensamblador.</li>
+          <li>Desarrollo web avanzado en Next.js para la creación de aplicaciones web responsivas.</li>
+          <li>Desarrollo de aplicaciones móviles en Android Studio, con experiencia en la creación de aplicaciones básicas y funcionales.</li>
+          <li>Uso de gestores de bases de datos como PostgreSQL.</li>
+          <li>Configuración y administración de redes, incluyendo la configuración de routers, switches y puntos de acceso.</li>
+          <li>Experiencia en la configuración de máquinas virtuales en entornos de nube, como Microsoft Azure y Amazon Web Services.</li>
+          <li>Uso de GitHub para colaborar en proyectos de desarrollo de software, incluyendo control de versiones y seguimiento de problemas.</li>
+          <li>Habilidad intermedia-avanzada en Excel para análisis de datos.</li>
+        </ul>
+      </section>
+      <section>
+        <h3>APTITUDES</h3>
+        <ul>
+          <li>Adaptabilidad excepcional a diversos entornos de trabajo y capacidad de integrarme rápidamente en nuevos proyectos.</li>
+          <li>Aprendizaje continuo y rápido, manteniéndome actualizado con las últimas tendencias tecnológicas y en constante evolución.</li>
+          <li>Habilidad para abordar problemas desde múltiples perspectivas, lo que permite encontrar soluciones innovadoras y eficaces.</li>
+          <li>Destreza en la interpretación de problemas abstractos y capacidad para traducirlos en soluciones tangibles y prácticas.</li>
+          <li>Comunicación efectiva y habilidades interpersonales que facilitan la colaboración en equipos multidisciplinarios.</li>
+          <li>Orientación a la mejora continua, buscando constantemente maneras de optimizar procesos y aumentar la eficiencia.</li>
+          <li>Consulta y aplicación de buenas prácticas de programación para garantizar la calidad y mantenibilidad del código</li>
+          <li>Fuerte ética de trabajo y compromiso con la excelencia en cada proyecto.</li>
+        </ul>
+      </section>
+      <section>
+        <h3>LENGUAJES</h3>
+        <ul>
+          <li>Español</li>
+          <li>Inglés - Intermedio/avanzado</li>
+        </ul>
+      </section>
+    </article>
+   
+    <footer id="foot">
+      <section class="navBar">
+        <ul>
+          <li>
+            <a href="mailto:leonardoaxelortiz@gmail.com" target="_parent">
+              <img src="email.png" alt="Email">
+              <br>leonardoaxelortiz@gmail.com </a>
+          </li>
+          <li>
+            <a href="https://github.com/Axel8555" target="_parent">
+              <img src="github.png" alt="GitHub">
+              <br>github.com/Axel8555</a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/laoz8555/" target="_parent">
+              <img src="linkedin.png" alt="GitHub">
+              <br>linkedin.com/in/laoz8555</a>
+          </li>
+          <li>
+            <a href="tel:+524622984605" target="_parent">
+              <img src="telefono.png" alt="Telefono">
+              <br>462 298 4605 </a>
+          </li>
+        </ul>
+      </section>
+    </footer>
+  </body>
+</html>
