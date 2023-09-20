@@ -4,240 +4,21 @@
     <title>Curriculum Vitae - Leonardo Axel Ortiz Zaragoza</title>
     <meta charset="utf-8">
     <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" type="text/css" href="styles.css">
     <style>
-      body {
-        font-family: Rockwell, Arial;
-        margin: 10%;
-        margin-top: 15px;
-        background: rgb(255, 0, 0);
-        background: linear-gradient(45deg, rgba(255, 0, 0, 1) 0%, rgba(255, 0, 0, 0) 100%),
-          repeating-radial-gradient(circle at 100% 0, transparent 0, #ffffff 2%),
-          repeating-linear-gradient(#ffb0b055, #ffb0b0);
-        background-size: 100vw 150vh;
-        background-attachment: fixed;
-        animation: expandBackground 10s infinite alternate;
-        animation-timing-function: cubic-bezier(.58, 0, .42, 1);
-      }
-
-      @keyframes expandBackground {
-        0% {
-          background-size: 100vw 150vh;
-        }
-
-        100% {
-          background-size: 130vw 195vh;
-        }
-      }
-
-      header {
-        display: block;
-        float: left;
-        width: 100%;
-        overflow: auto;
-        margin-left: 15px;
-      }
-
-      #photo {
-        float: right;
-        align-content: flex-end;
-        display: block;
-      }
-
-      #info {
-        width: calc(100% - 330px);
-        display: block;
-        margin-left: 15px;
-        float: left;
-      }
-
-      img.photo {
-        width: 200px;
-        border-radius: 50%;
-        padding: 10px;
-        margin: 10px;
-        border: 10px solid #F44;
-      }
-
-      article {
-        display: block;
-        margin-left: 15px;
-        float: left;
-      }
-      
-      footer {
-        display: block;
-        margin-left: 15px;
-        float: left;
-        align-content: flex-start;
-        width: calc(100% - 12.5px);
-      }
-
-      main {
-        display: block;
-        margin-left: 15px;
-        float: right;
-        align-content: flex-start;
-        width: calc(70% - 30px);
-      }
-
-      aside {
-        display: block;
-        margin-left: 15px;
-        float: left;
-        width: 30%;
-      }
-
-      #contact-info {
-        min-width: 100%;
-      }
-
-      #other {
-        float: right;
-        min-width: 20%
-      }
-
-      #title {
-        font-family: Arial;
-        font-size: 20px;
-        font-weight: bold;
-        color: #EEE;
-      }
-
-      a {
-        text-decoration: none;
-        color: #000;
-      }
-
-      section {
-        background-color: #FFF;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-        padding: 20px;
-        margin-bottom: 15px;
-      }
-
-      h1 {
-        font-family: Arial;
-        color: #333;
-        margin-bottom: 20px;
-        font-size: 50px;
-      }
-
-      h2 {
-        font-style: italic;
-        font-family: Arial;
-        color: #444;
-        margin-bottom: 20px;
-        font-size: 30px;
-      }
-
-      h3 {
-        font-family: Arial;
-        text-transform: uppercase;
-        border-bottom: 5px solid #F44;
-      }
-
-      .upper {
-        text-transform: uppercase;
-        font-weight: bold;
-      }
-      .break {
-        display: block;
-      }
-      #dist {
-        font-weight: bold;
-      }
-
-      .navBar {
-        display: flex;
-        justify-content: center;
-      }
-
-      .navBar ul {
-        /*display: block;*/
-        width: calc(100%/4 - 15px);
-        display: flex;
-        float: left;
-        list-style: none;
-        justify-content: center;
-        padding: 0;
-        margin: 0;
-      }
-
-      .navBar li {
-        min-width: calc(100% - 20px);
-        margin-right: 10px;
-        padding: 10px;
-        text-align: center;
-        justify-content: center;
-        border-radius: 5px;
-        transition: background-color 0.3s ease;
-      }
-
-      .navBar a {
-        text-decoration: none;
-        color: #000;
-        padding: 5px;
-      }
-
-      .navBar img {
-        margin: 5px;
-        padding: 5px;
-        width: 30px;
-      }
-
-      .navBar li:hover {
-        background-color: #F44;
-      }
-
-
-      @media (max-width: 880px) {
-        main {
-          float: left;
-          min-width: 100%;
-        }
-        aside, footer   {
-          min-width: 100%;
-        }
-        #info{
-          width: 90%;
-          display: block;
-        margin-left: 15px;
-        float: left;
-        }
-        #photo{
-          min-width: 100%;
-          margin: 0 auto;
-          text-align: center;
-            display: block;
-          margin-left: 15px;
-          float: left;
-        }
-      img.photo {
-        width: 30%;
-      }
-      .navBar ul {
-        /*display: block;*/
-        width: 100%;
-        display: inline-block;
-        list-style: none;
-      }
-      .navBar li {
-        min-width: calc(100% - 20px);
-        padding: 10px;
-      }
-    }
-
+      /*O*/
     </style>
   </head>
   <body>
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
     <header>
-      <span id="info">
+      <span class="info">
         <h1>Leonardo Axel Ortiz Zaragoza</h1>
-        <h2>Curriculum Vitae</h2>
-        <p id="title">ESTUDIANTE EN INGENIERÍA EN SISTEMAS COMPUTACIONALES | ESCOM IPN</p>
+        <p class="title">ESTUDIANTE EN INGENIERÍA EN SISTEMAS COMPUTACIONALES | ESCOM IPN</p>
       </span>
-      <span id="photo">
+      <span class="photo">
         <img class="photo" src="foto.jpg" alt="Fotografia">
       </span>
     </header>
@@ -270,7 +51,7 @@
                 <ul>
                     <li>Desarrollo de una página web con utilidades y calculadoras básicas en electrónica.</li>
                     <li>Frontend implementado en Next.JS para una experiencia de usuario responsiva.</li>
-                    <li>Desarrollo de un microservicio en Golang para la <a id="dist" href="http://circuittoolbox.com/calculadora-de-amplificacion" target="_blank">calculadora de amplificación</a>, con comunicación a través de sockets TCP.</li>
+                    <li>Desarrollo de un microservicio en Golang para la <a class="bold " href="http://circuittoolbox.com/calculadora-de-amplificacion" target="_blank">calculadora de amplificación</a>, con comunicación a través de sockets TCP.</li>
                     <li>Despliegue exitoso en una máquina virtual en AWS.</li>
                 </ul>
             </li>
@@ -380,7 +161,7 @@
     </aside>
    
     <footer>
-      <section class="navBar">
+      <section class="container">
         <ul>
           <li>
             <a href="mailto:leonardoaxelortiz@gmail.com" target="_parent">
@@ -397,11 +178,7 @@
               <img src="linkedin.png" alt="GitHub">
               <br>linkedin.com/in/laoz8555</a>
           </li>
-          <li>
-            <a href="tel:+524622984605" target="_parent">
-              <img src="telefono.png" alt="Telefono">
-              <br>462 298 4605 </a>
-          </li>
+
         </ul>
       </section>
     </footer>
