@@ -40,6 +40,14 @@
       #photo {
         float: right;
         align-content: flex-end;
+        display: block;
+      }
+
+      #info {
+        width: calc(100% - 330px);
+        display: block;
+        margin-left: 15px;
+        float: left;
       }
 
       img.photo {
@@ -55,7 +63,7 @@
         margin-left: 15px;
         float: left;
       }
-
+      
       footer {
         display: block;
         margin-left: 15px;
@@ -64,19 +72,19 @@
         width: calc(100% - 12.5px);
       }
 
-      #side {
-        width: 30%;
-      }
-
-      #main {
+      main {
+        display: block;
+        margin-left: 15px;
         float: right;
         align-content: flex-start;
         width: calc(70% - 30px);
-        /* Resta el ancho del elemento con ID "side" */
       }
 
-      #info {
-        width: calc(100% - 330px);
+      aside {
+        display: block;
+        margin-left: 15px;
+        float: left;
+        width: 30%;
       }
 
       #contact-info {
@@ -129,18 +137,14 @@
         border-bottom: 5px solid #F44;
       }
 
-      #upper {
+      .upper {
         text-transform: uppercase;
         font-weight: bold;
       }
-      #dist {
-        font-weight: bold;
-      }
-
-      label {
+      .break {
         display: block;
-        margin: 5px;
-        margin-top: 10px;
+      }
+      #dist {
         font-weight: bold;
       }
 
@@ -151,7 +155,7 @@
 
       .navBar ul {
         /*display: block;*/
-        width: calc(25% - 15px);
+        width: calc(100%/4 - 15px);
         display: flex;
         float: left;
         list-style: none;
@@ -186,128 +190,28 @@
         background-color: #F44;
       }
 
-      form {
-        width: 70%;
-        margin: 0 auto;
-      }
-
-      label {
-        display: block;
-        width: 100%;
-        margin-bottom: 10px;
-      }
-
-      /* Estilo para el elemento input */
-      input {
-        display: block;
-        width: 100%;
-        margin-bottom: 10px;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        font-size: 16px;
-        outline: none;
-        transition: border-color 0.3s ease-in-out;
-      }
-
-      input:focus {
-        border-color: #5c94ff;
-      }
-
-      /* Estilo para el elemento textarea */
-      textarea {
-        display: block;
-        width: 100%;
-        margin-bottom: 10px;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        font-size: 16px;
-        outline: none;
-        transition: border-color 0.3s ease-in-out;
-      }
-
-      textarea:focus {
-        border-color: #5c94ff;
-      }
-
-      button {
-        display: block;
-        margin: 0 auto;
-        text-align: center;
-        padding: 10px 20px;
-        background-color: #F44;
-        color: #FFF;
-        font-size: 16px;
-        font-weight: bold;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background-color .15s linear;
-      }
-
-      button:focus {
-        outline: none;
-      }
-
-      button:hover {
-        background-color: #D22;
-      }
-
-      button::-moz-focus-inner {
-        border: 0;
-      }
-
-      button:active {
-        transform: translateY(0.1em);
-      }
-
-      .exploding,
-      .exploding:focus,
-      .exploding:hover {
-        background: transparent;
-        color: transparent;
-      }
-
-      .exploding {
-        pointer-events: none;
-        position: relative;
-        will-change: transform;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-      }
-
-      .particle {
-        position: absolute;
-        top: 0;
-        left: 0;
-      }
-
-      .particle--debris {
-        background: #255ff4;
-      }
-
-      .particle--fire {
-        border-radius: 50%;
-      }
 
       @media (max-width: 880px) {
-        #main {
+        main {
           float: left;
           min-width: 100%;
         }
-        #side, footer   {
+        aside, footer   {
           min-width: 100%;
         }
         #info{
           width: 90%;
+          display: block;
+        margin-left: 15px;
+        float: left;
         }
         #photo{
           min-width: 100%;
           margin: 0 auto;
           text-align: center;
+            display: block;
+          margin-left: 15px;
+          float: left;
         }
       img.photo {
         width: 30%;
@@ -322,21 +226,22 @@
         min-width: calc(100% - 20px);
         padding: 10px;
       }
+    }
 
     </style>
   </head>
   <body>
     <header>
-      <article id="info">
+      <span id="info">
         <h1>Leonardo Axel Ortiz Zaragoza</h1>
         <h2>Curriculum Vitae</h2>
         <p id="title">ESTUDIANTE EN INGENIERÍA EN SISTEMAS COMPUTACIONALES | ESCOM IPN</p>
-      </article>
-      <article id="photo">
+      </span>
+      <span id="photo">
         <img class="photo" src="foto.jpg" alt="Fotografia">
-      </article>
+      </span>
     </header>
-    <article id="main">
+    <main>
       <section>
         <h3>RESUMEN</h3>
         <p>
@@ -348,13 +253,11 @@
       <section>
         <h3>FORMACIÓN</h3>
         <p>
-        <div id="upper">
-          <a href="http://www.enms-irapuato.ugto.mx/" target="contenido">2019 • ESCUELA DE NIVEL MEDIO SUPERIOR DE IRAPUATO • UNIVERSIDAD DE GUANAJUATO</a>
-        </div> Bachillerato general orientado a ingenierías. </p>
+          <a class="upper break" href="http://www.enms-irapuato.ugto.mx/" target="contenido">2019 • ESCUELA DE NIVEL MEDIO SUPERIOR DE IRAPUATO • UNIVERSIDAD DE GUANAJUATO</a>
+          Bachillerato general orientado a ingenierías. </p>
         <p>
-        <div id="upper">
-          <a href="https://www.escom.ipn.mx/" target="contenido">EN CURSO 9° SEMESTRE • ESCUELA SUPERIOR DE CÓMPUTO • INSTITUTO POLITÉCNICO NACIONAL</a>
-        </div> Ingeniería en Sistemas Computacionales. </p>
+          <a class="upper break" href="https://www.escom.ipn.mx/" target="contenido">EN CURSO 9° SEMESTRE • ESCUELA SUPERIOR DE CÓMPUTO • INSTITUTO POLITÉCNICO NACIONAL</a>
+          Ingeniería en Sistemas Computacionales. </p>
       </section>
 
 
@@ -363,7 +266,7 @@
         <p><h4>Desarrollo de Software:</h4></p>
         <ol>
             <li>
-                <h4><a href="https://drive.google.com/file/d/1oOotgQFq6Yp-eZvBnBDyT13NRzQxb8cl/view?usp=sharing">Primer lugar en Expo ESCOM 2023</a> - Ingeniería de Software - <a id="upper" href="http://circuittoolbox.com/" target="_blank">CircuitToolbox.com</a></h4>
+                <h4><a href="https://drive.google.com/file/d/1oOotgQFq6Yp-eZvBnBDyT13NRzQxb8cl/view?usp=sharing">Primer lugar en Expo ESCOM 2023</a> - Ingeniería de Software - <a class="upper" href="http://circuittoolbox.com/" target="_blank">CircuitToolbox.com</a></h4>
                 <ul>
                     <li>Desarrollo de una página web con utilidades y calculadoras básicas en electrónica.</li>
                     <li>Frontend implementado en Next.JS para una experiencia de usuario responsiva.</li>
@@ -432,9 +335,9 @@
         </ul>
       </section>
 
-    </article>
+    </main>
 
-    <article id="side">
+    <aside>
       <section>
         <h3>OBJETIVO PROFESIONAL</h3>
         <p>
@@ -474,9 +377,9 @@
           <li>Inglés - Intermedio/avanzado</li>
         </ul>
       </section>
-    </article>
+    </aside>
    
-    <footer id="foot">
+    <footer>
       <section class="navBar">
         <ul>
           <li>
