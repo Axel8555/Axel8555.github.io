@@ -267,6 +267,10 @@ a {
     text-decoration: none;
     color: #000;
 }
+a:hover {
+    text-decoration-line: underline;
+    text-decoration-style: dotted;
+}
 
 section {
     background-color: #FFF;
