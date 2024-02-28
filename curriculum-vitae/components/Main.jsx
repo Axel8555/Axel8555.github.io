@@ -8,7 +8,7 @@ export default function Main() {
       <main>
         <article>
           <section>
-            <h2>Titulo</h2>
+            <h2>Titulo2</h2>
             <p>
               Lorem Ipsum es simplemente el texto de relleno de las
               imprentas y archivos de texto. Lorem Ipsum ha sido el texto
