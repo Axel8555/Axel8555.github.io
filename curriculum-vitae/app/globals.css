@@ -1,0 +1,225 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #ff2b60;
+  --color-secondary: #f44;
+  --color-ternary: #ff602b;
+  --color-light: #fff;
+  --color-dark: #333;
+  --font-family:'Nunito', Arial, Helvetica, sans-serif;
+  --font-size-small: 14px;
+  --font-size-medium: 20px;
+  --font-size-large: 48px;
+  --font-main-title: 700 var(--font-size-large) var(--font-family);
+  --font-main-subtitle: 700 var(--font-size-medium) var(--font-family);
+  --font-title: 700 var(--font-size-medium) var(--font-family);
+
+  --background-gradient: linear-gradient(
+    110deg,
+    var(--color-primary) 0%,
+    var(--color-primary) 33.33%,
+    var(--color-secondary) 33.33%,
+    var(--color-secondary) 66.66%,
+    var(--color-ternary) 66.66%
+  );
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+.bg {
+  animation:slide 30s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, var(--color-primary) 50%, var(--color-ternary) 50%);
+  bottom:0;
+  left:-50%;
+  opacity:.5;
+  position:fixed;
+  right:-50%;
+  top:0;
+  z-index:-1;
+}
+
+.bg2 {
+  animation-direction:alternate-reverse;
+  animation-duration:40s;
+}
+
+.bg3 {
+  animation-duration:50s;
+}
+@keyframes slide {
+  0% {
+    transform:translateX(-25%);
+  }
+  100% {
+    transform:translateX(25%);
+  }
+}
+
+body {
+  /*background: var(--background-gradient);*/
+  display: flex;
+  flex-direction: column;
+  padding: 30px 10%;
+  gap: 15px;
+  
+  font-family: var(--font-family);
+  font-size: var(--font-size-small);
+  align-items: center;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  
+  align-items: center;
+}
+
+
+.main-title {
+  line-height: normal;
+  width: 100%;
+}
+
+h1 {
+  color: var(--color-dark);
+  text-transform: capitalize;
+  font: var(--font-main-title);
+}
+
+h3 {
+  color: var(--color-light);
+  text-transform: uppercase;
+  font: var(--font-main-subtitle);
+}
+
+
+.profile-picture {
+  aspect-ratio: 1!important;
+  border-radius: 50%;
+  width: 200px!important;
+  box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.3);
+
+}
+.container-profile-picture { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 50%;
+  padding: 10px;
+  border: 10px solid var(--color-secondary);
+  box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.3);
+}
+
+
+main {
+  justify-content: center;
+  gap: 15px;
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: nowrap
+}
+
+aside {
+  display: flex;
+  flex-direction: column;
+  line-height: normal;
+  flex-grow: 1;
+  gap: 15px;
+  color: var(--color-dark);
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  line-height: normal;
+  flex-grow: 1;
+  gap: 15px;
+  color: var(--color-dark);
+}
+
+section {
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.3);
+  background-color: var(--color-light);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 15px;
+}
+
+h2 {
+  border-bottom: 5px solid var(--color-secondary);
+  text-transform: uppercase;
+  font: var(--font-title);
+}
+
+p {
+  font: 400 14px Nunito, sans-serif;
+}
+
+footer {
+  width: 100%;
+  display: flex;
+  border-radius: 10px;
+  
+  justify-content: center;
+  box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.3);
+  background-color: var(--color-light);
+}
+footer ul {
+  width: 100%;
+  padding: 15px;
+  gap: 15px;
+  display: flex;
+  justify-content: center;
+}
+footer ul li {
+  width: 100%;
+}
+.social-media {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  font-size: 14px;
+  border-radius: 10px;
+  color: var(--color-dark);
+  padding: 5px;
+  text-align: center;
+  gap: 5x;
+  transition: background-color 0.3s ease
+}
+.social-media:hover{
+  background-color: var(--color-secondary);
+}
+.social-media:active{
+  background-color: var(--color-ternary);
+}
+.social-media-icon {
+  aspect-ratio: 1;
+  width: 30px;
+  align-self: center;
+}
+.social-media-text {
+  font-family: Nunito, sans-serif;
+}
