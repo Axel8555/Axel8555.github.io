@@ -2,7 +2,6 @@
 import * as React from "react";
 import Experience from "./Main/Experience";
 
-
 export default function Main() {
   return (
     <>
@@ -74,7 +73,6 @@ export default function Main() {
           </section>
         </aside>
       </main>
-
     </>
   );
 }
