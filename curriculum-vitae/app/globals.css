@@ -176,14 +176,33 @@ h2 {
   text-transform: uppercase;
   font: var(--font-title);
 }
-
+h4 {
+  font-weight: 700;
+}
 p {
+}
+ol{
+  list-style-type: decimal;
+  list-style-position: outside;
+  padding-inline-start: 2em;
 }
 ul{
   list-style-type: disc;
+  list-style-position: outside;
+  padding-inline-start: 2em;
 }
-li{display: list-item;
-  text-align: -webkit-match-parent;}
+li{
+  display: list-item;
+  text-align: -webkit-match-parent;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+a:hover {
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+}
 footer {
   width: 100%;
   display: flex;
@@ -204,6 +223,9 @@ footer ul {
 footer ul li {
   width: 100%;
   
+}
+footer ul li a:hover{
+  text-decoration: none;
 }
 .social-media {
   display: flex;
@@ -233,6 +255,16 @@ footer ul li {
   font-family: Nunito, sans-serif;
 }
 
+.upper {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.break {
+  display: block;
+}
+.bold {
+  font-weight: bold;
+}
 @media (max-width: 1100px) {
   main {
     grid-template-columns: 1fr; /* Esto cambia el layout a una sola columna */

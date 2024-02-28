@@ -2,7 +2,7 @@
 import * as React from "react";
 import Image from 'next/image';
 
-export default function MyComponent(props) {
+export default function Footer() {
     return (
         <>
             <footer>
@@ -12,51 +12,64 @@ export default function MyComponent(props) {
                             <Image
                                 className="social-media-icon"
                                 src="/email.png"
-                                alt="Email icon"
+                                alt="Email"
                                 width={100}
                                 height={100}
                                 loading="lazy"
                             />
-                            <div className="social-media-text">Red social</div>
+                            <div className="social-media-text">leonardoaxelortiz@gmail.com</div>
                         </a>
                     </li>
                     <li>
-                        <a href="mailto:leonardoaxelortiz@gmail.com" target="_parent" className="social-media">
+                        <a href="https://github.com/Axel8555" target="_parent" className="social-media">
                             <Image
                                 className="social-media-icon"
-                                src="/email.png"
-                                alt="Email icon"
+                                src="/github.png"
+                                alt="Github"
                                 width={100}
                                 height={100}
                                 loading="lazy"
                             />
-                            <div className="social-media-text">Red social</div>
+                            <div className="social-media-text">github.com/Axel8555</div>
                         </a>
                     </li>
                     <li>
-                        <a href="mailto:leonardoaxelortiz@gmail.com" target="_parent" className="social-media">
+                        <a href="https://www.linkedin.com/in/laoz8555/" target="_parent" className="social-media">
                             <Image
                                 className="social-media-icon"
-                                src="/email.png"
-                                alt="Email icon"
+                                src="/linkedin.png"
+                                alt="Linkedin"
                                 width={100}
                                 height={100}
                                 loading="lazy"
                             />
-                            <div className="social-media-text">Red social</div>
+                            <div className="social-media-text">linkedin.com/in/laoz8555</div>
                         </a>
                     </li>
                     <li>
-                        <a href="mailto:leonardoaxelortiz@gmail.com" target="_parent" className="social-media">
+                        <a href="https://drive.google.com/file/d/1H4zcS4PlTrAbtxOaD8ShX9UsFH_bmyH-/view?usp=sharing" target="_parent" className="social-media">
                             <Image
                                 className="social-media-icon"
-                                src="/email.png"
-                                alt="Email icon"
+                                src="/descarga.png"
+                                alt="Download"
                                 width={100}
                                 height={100}
                                 loading="lazy"
                             />
-                            <div className="social-media-text">Red social</div>
+                            <div className="social-media-text">Download CV</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" target="_parent" className="social-media">
+                            <Image
+                                className="social-media-icon"
+                                src="/llave.png"
+                                alt="Key"
+                                width={100}
+                                height={100}
+                                loading="lazy"
+                            />
+                            <div className="social-media-text">Public Key</div>
                         </a>
                     </li>
                 </ul>
