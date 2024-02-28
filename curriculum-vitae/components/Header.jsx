@@ -19,7 +19,6 @@ export default function Header() {
                         height={200}
                     />
                 </div>
-
             </header>
         </>
     );
