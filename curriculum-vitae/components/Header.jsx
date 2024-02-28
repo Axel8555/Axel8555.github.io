@@ -1,6 +1,5 @@
-"use client";
+//"use client";
 import * as React from "react";
-import Image from 'next/image';
 
 
 export default function Header() {
@@ -12,8 +11,7 @@ export default function Header() {
                     <h3>STUDENT IN COMPUTER SYSTEMS ENGINEERING | ESCOM IPN</h3>
                 </div>
                 <div className="container-profile-picture">
-
-                    <Image
+                    <img
                         className="profile-picture"
                         src="/foto.jpg"
                         alt="Profile picture"
