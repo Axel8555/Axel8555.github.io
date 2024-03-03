@@ -13,7 +13,7 @@ export default function Main() {
               I am a student of Computer Systems Engineering at the Escuela Superior de Cómputo at the Instituto Politécnico Nacional, currently in the 9th semester. My passion for programming has led me to explore new technologies. I constantly seek challenges that take me out of my comfort zone and allow me to learn and grow.
               My experience includes web development projects, applications, backend, databases, networks, cloud services, and microcontrollers.
               I'm a quick learner, adapt easily to different work environments, and have the ability to analyze problems from different perspectives.
-              Outside of school, I enjoy video games, playing the guitar, and learning new things, like skating.
+              Outside of school, I enjoy video games, listening to music, watching movies, and learning new things, like skating.
             </p>
           </section>
           <section>
@@ -68,7 +68,7 @@ export default function Main() {
             <h2>LANGUAGES</h2>
             <ul>
               <li>Spanish</li>
-              <li>English - Intermediate/Advanced</li>
+              <li>English - B1</li>
             </ul>
           </section>
         </aside>

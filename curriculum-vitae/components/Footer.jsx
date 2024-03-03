@@ -43,7 +43,7 @@ export default function Footer() {
                         </a>
                     </li>
                     <li>
-                        <a href="https://drive.google.com/file/d/1H4zcS4PlTrAbtxOaD8ShX9UsFH_bmyH-/view?usp=sharing" target="_parent" className="social-media">
+                        <a href="https://drive.google.com/drive/folders/11Cfnh7getSdonTiVMNHxyx6xqjwY1shC?usp=sharing" target="_parent" className="social-media">
                             <img
                                 className="social-media-icon"
                                 src="/descarga.png"
@@ -52,18 +52,6 @@ export default function Footer() {
                                 height={100}
                             />
                             <div className="social-media-text">Download CV</div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="" target="_parent" className="social-media">
-                            <img
-                                className="social-media-icon"
-                                src="/llave.png"
-                                alt="Key"
-                                width={100}
-                                height={100}
-                            />
-                            <div className="social-media-text">Public Key</div>
                         </a>
                     </li>
                 </ul>
