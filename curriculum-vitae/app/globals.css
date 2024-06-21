@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 :root {
-  --color-primary: #ff2b60;
-  --color-secondary: #f44;
-  --color-ternary: #ff602b;
+  --color-primary: #a3faff;
+  --color-secondary: #7d6cff;
+  --color-ternary: #3f36bf;
   --color-light: #fff;
   --color-dark: #333;
   --font-family:'Nunito', Arial, Helvetica, sans-serif;
@@ -16,7 +16,7 @@
   --font-main-subtitle: 700 var(--font-size-medium) var(--font-family);
   --font-title: 700 var(--font-size-medium) var(--font-family);
   
-  --default-box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.25);;
+  --default-box-shadow: 0px 0px 7px 3px rgba(0, 0, 0, 0.25);;
 
   --background-gradient: linear-gradient(
     110deg,
@@ -50,11 +50,11 @@
 
 .bg2 {
   animation-direction:alternate-reverse;
-  animation-duration:40s;
+  animation-duration:29s;
 }
 
 .bg3 {
-  animation-duration:50s;
+  animation-duration:37s;
 }
 @keyframes slide {
   0% {
@@ -134,15 +134,28 @@ h3 {
 }
 
 
+/* Asumiendo que quieres añadir area0 a tu grid */
 main {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-areas: "area1 area2 area2";
+  grid-template-columns: 1fr 1fr 1fr; 
+  grid-template-rows: auto auto 1fr; 
+  grid-template-areas: 
+    "area0 area0 area0"
+    "area2 area1 area1"
+    "area3 area1 area1";
   gap: 15px;
+  text-align: justify; /* Add this line to justify the text */
 }
 
+.area0-important {
+  grid-area: area0 !important;
+}
+
+.area3-important {
+  grid-area: area3 !important;
+}
 aside {
-  grid-area: area1;
+  grid-area: area2;
   display: flex;
   flex-direction: column;
   line-height: normal;
@@ -152,7 +165,7 @@ aside {
 }
 
 article {
-  grid-area: area2;
+  grid-area: area1;
   display: flex;
   flex-direction: column;
   line-height: normal;
@@ -168,7 +181,7 @@ section {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  padding: 30px 15px;
+  padding: 30px 30px;
 }
 
 h2 {
@@ -269,8 +282,10 @@ footer ul li a:hover{
   main {
     grid-template-columns: 1fr; /* Esto cambia el layout a una sola columna */
     grid-template-areas:
+      "area0"
       "area2"
-      "area1";
+      "area1"
+      "area3";
   }
   header {
     flex-direction: column;

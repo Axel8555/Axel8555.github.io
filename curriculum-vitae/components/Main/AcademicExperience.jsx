@@ -4,7 +4,7 @@ import * as React from "react";
 export default function Experience() {
     return (
         <>
-        <h2>EXPERIENCE</h2>
+        <h2>ACADEMIC EXPERIENCE</h2>
             <h4>Software Development:</h4>
             <ol>
               <li>
@@ -67,13 +67,6 @@ export default function Experience() {
                 </ul>
               </li>
             </ol>
-            <h4>Experience in Computer Systems:</h4>
-            <ul>
-              <li>Design and maintenance of network topologies, including routers, switches, access points, and load balancers, mainly focusing on Omada products.</li>
-              <li>Configuration of RAID arrays for efficient data storage management.</li>
-              <li>Configuration and maintenance of FTP servers to facilitate file transfer on a subnet.</li>
-              <li>Design and configuration of networks for virtual machines in cloud environments such as Microsoft Azure and Amazon Web Services.</li>
-            </ul>
         </>
     );
 }
