@@ -1,4 +1,4 @@
-//"use client";
+
 import Head from 'next/head'; // Importar Head de Next.js
 import "@/app/globals.css";
 import "@/app/font-styles.css";
