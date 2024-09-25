@@ -30,7 +30,7 @@ jobs:
 
       # Paso 5: Imprimir el contenido del directorio de salida
       - name: List files in output directory
-        run: ls ./out #| head -n 30
+        run: ls -a ./out #| head -n 30
 
       # Paso 6: Desplegar a la rama main
       - name: Deploy to main
