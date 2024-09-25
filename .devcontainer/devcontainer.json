@@ -1,0 +1,32 @@
+// Para detalles del formato, ver https://aka.ms/devcontainer.json. Para opciones de configuración, ver el
+// README en: https://github.com/devcontainers/templates/tree/main/src/docker-existing-dockerfile
+{
+  "name": "cv-dev",
+
+  // Usamos el archivo docker-compose.yml para manejar el contenedor
+  "dockerComposeFile": "../docker-compose.yml",
+
+  // Definimos el servicio de desarrollo (cv-dev)
+  "service": "cv-dev",
+
+  // Solo activamos el perfil de desarrollo
+  "runServices": ["cv-dev"],
+
+  // Definimos el directorio de trabajo
+  "workspaceFolder": "/app",
+
+  // Hacemos el puerto 3000 accesible desde la máquina local
+  "forwardPorts": [3000]
+
+  // Características para agregar al contenedor de desarrollo. Más información: https://containers.dev/features.
+  // "features": {},
+
+  // Descomentar la siguiente línea para ejecutar comandos después de que el contenedor sea creado.
+  // "postCreateCommand": "cat /etc/os-release",
+
+  // Configurar propiedades específicas de herramientas.
+  // "customizations": {},
+
+  // Descomentar para conectarse como un usuario existente diferente al predeterminado del contenedor. Más información: https://aka.ms/dev-containers-non-root.
+  // "remoteUser": "devcontainer"
+}

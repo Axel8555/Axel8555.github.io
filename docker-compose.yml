@@ -1,0 +1,28 @@
+services:
+#docker-compose up cv-dev 
+  cv-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    container_name: cv-dev
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    environment:
+      NODE_ENV: development
+      CHOKIDAR_USEPOLLING: "true"
+    command: npm run dev
+    restart: unless-stopped
+
+  cv-prod:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: cv-prod
+    ports:
+      - "3000:3000"
+    environment:
+      NODE_ENV: production
+    restart: unless-stopped

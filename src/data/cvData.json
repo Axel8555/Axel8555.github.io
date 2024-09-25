@@ -1,0 +1,192 @@
+{
+  "header": {
+    "name": "Leonardo Axel Ortiz Zaragoza",
+    "title": "STUDENT IN COMPUTER SYSTEMS ENGINEERING | ESCOM IPN",
+    "profilePicture": "/foto.jpg"
+  },
+  "summary": "Full Stack Developer in training with hands-on experience in both front-end and back-end technologies. Proficient in building scalable web applications using React, Next.js, Golang, and Python. Familiar with cloud computing (AWS, Azure) and containerization tools (Docker). Eager to apply technical skills to innovative projects in a collaborative environment. Currently completing a degree in Computer Systems Engineering at ESCOM IPN, with a strong foundation in software engineering and networking.",
+  "education": [
+    {
+      "institution": "ESCUELA SUPERIOR DE CÓMPUTO • INSTITUTO POLITÉCNICO NACIONAL",
+      "link": "https://www.escom.ipn.mx/",
+      "graduation": "JANUARY 2025",
+      "degree": "Computer Systems Engineering"
+    }
+  ],
+  "professionalObjective": "To join a dynamic technology team where I can leverage my programming, cloud computing, and networking skills to develop innovative and efficient solutions. My goal is to contribute to cutting-edge projects that promote business growth and drive technological advancements. Passionate about problem-solving and continuous improvement, I am dedicated to creating systems that excel in both performance and scalability.",
+  "hardSkills": [
+    {
+      "category": "Frontend",
+      "skills": " HTML, CSS, JavaScript, TypeScript, React, Next.js"
+    },
+    {
+      "category": "Backend & Programming",
+      "skills": " Golang, Python, Java, C, Assembly"
+    },
+    {
+      "category": "API Technologies",
+      "skills": "GraphQL, Hasura, REST"
+    },
+    { "category": "Databases", "skills": "SQL Server, PostgreSQL" },
+    {
+      "category": "Networking Services",
+      "skills": "DHCP, DNS, FTP, SNMP"
+    },
+    {
+      "category": "Networking simulation",
+      "skills": "GNS3, Cisco Packet Tracer"
+    },
+    { "category": "Cloud", "skills": "Microsoft Azure, Amazon Web Services" },
+    {
+      "category": "Containerization",
+      "skills": "Docker (for deploying and managing containers)"
+    },
+    { "category": "Operating Systems", "skills": "Linux Ubuntu & Debian" },
+    { "category": "Collaboration", "skills": "GitHub, Figma, Trello" },
+    { "category": "Data analysis", "skills": "KNIME, Advanced Excel, Power BI, Pandas & Numpy" }
+  ],
+  "softSkills": [
+    "Effective Communication",
+    "Adaptability",
+    "Creative Problem Solving",
+    "Collaborative Team Spirit",
+    "Continuous Self-learning & Improvement",
+    "Professional Integrity"
+  ],
+  "languages": [
+    { "language": "Spanish", "level": "Native" },
+    { "language": "English", "level": "B2" }
+  ],
+  "academicExperience": [
+    {
+      "title": "First place at Expo ESCOM 2023",
+      "subtitle": "Software Engineering - CircuitToolbox.com",
+      "link": "https://drive.google.com/file/d/1oOotgQFq6Yp-eZvBnBDyT13NRzQxb8cl/view?usp=sharing",
+      "details": [
+        "Developed a web platform with electronic utilities and calculators using Next.js for the frontend.",
+        "Created a backend microservice in Golang, utilizing TCP sockets for communication.",
+        "Successfully deployed on AWS."
+      ]
+    },
+    {
+      "title": "Design of a 32-bit Monocycle Processor",
+      "subtitle": "RISC-V Architecture with Intel Quartus",
+      "details": [
+        "Designed a 32-bit monocycle processor with RISC-V architecture using Intel Quartus.",
+        "Successfully tested the design on an FPGA."
+      ]
+    },
+    {
+      "title": "Encryption and Decryption Tools",
+      "subtitle": "AES and RSA algorithms",
+      "details": [
+        "Developed tools for file encryption, applying AES and RSA algorithms for data protection, digital signing, and verification."
+      ]
+    },
+    {
+      "title": "Semifinalist at Hackathon Talent Land 2023 ",
+      "subtitle": "Track Salud Digna",
+      "link": "https://drive.google.com/file/d/1oIJ1tpl7-OPesHTgqGbgsxoADEEbZiUZ/view?usp=sharing",
+      "details": [
+        "Developed a system using ChatGPT 3.5 API to recommend healthy recipes and facilitate communication with nutritionists.",
+        "Integrated a database of ingredients and recipes for accurate dietary recommendations."
+      ]
+    },
+    {
+      "title": "Wireless Voltmeter with Web Interface",
+      "details": [
+        "Designed a voltage sensor (0V - 60V).",
+        "Used a PIC16F628A microcontroller.",
+        "Developed a microservice for Bluetooth communication and built a web interface using Next.js."
+      ]
+    },
+    {
+      "title": "Development of a DSPIC-Controlled Cannon with Android App",
+      "details": [
+        "Designed and programmed a cannon controlled via a DSPIC microcontroller.",
+        "Created an Android app for Bluetooth-based control of the cannon."
+      ]
+    },
+    {
+      "title": "Pseudo-translator (English-Spanish) with Error Detection",
+      "details": [
+        "Built a translation system using Next.js and Python with Levenshtein distance for error detection and correction.",
+        "Implemented data storage using PostgreSQL 15."
+      ]
+    },
+    {
+      "title": "Plant Catalog and Care Application",
+      "details": [
+        "Developed an Android app in Java that provides detailed care instructions for various plant species."
+      ]
+    },
+    {
+      "title": "E-commerce Website",
+      "details": [
+        "Designed and documented a fictional e-commerce platform for a car dealership."
+      ]
+    },
+    {
+      "title": "Discord Bot Development",
+      "details": [
+        "Created a Discord bot in Node.js that processes text and generates voice responses via an API."
+      ]
+    }
+  ],
+  "professionalExperience": [
+    {
+      "title": "Cloud Technologies",
+      "details": [
+        "Managed cloud environments using virtual machines, Azure Functions, load balancing, and distributed systems on Microsoft Azure and AWS."
+      ]
+    },
+    {
+      "title": "On-premise Server Management",
+      "details": [
+        "Managed on-premise servers (Dell R360) to deploy web services and applications, ensuring efficient and secure hosting for various services."
+      ]
+    },
+    {
+      "title": "Data Normalization, Transformation, and Visualization",
+      "details": [
+        "Normalized and transformed Excel data formats using Power Query and presented interactive dashboards via Power BI."
+      ]
+    },
+    {
+      "title": "Networking",
+      "details": [
+        "Designed and configured network topologies using Cisco Layer 3 routers and switches, along with virtual machines in GNS3.",
+        "Configured network services such as DHCP, DNS, FTP, and SNMP on Linux platforms.",
+        "Simulated network infrastructures in Cisco Packet Tracer, applying routing and switching protocols such as OSPF and EIGRP."
+      ]
+    }
+  ],
+  "footer": {
+    "contacts": [
+      {
+        "type": "Email",
+        "link": "mailto:leonardoaxelortiz@gmail.com",
+        "icon": "/email.png",
+        "text": "leonardoaxelortiz@gmail.com"
+      },
+      {
+        "type": "GitHub",
+        "link": "https://github.com/Axel8555",
+        "icon": "/github.png",
+        "text": "github.com/Axel8555"
+      },
+      {
+        "type": "LinkedIn",
+        "link": "https://www.linkedin.com/in/laoz8555/",
+        "icon": "/linkedin.png",
+        "text": "linkedin.com/in/laoz8555"
+      },
+      {
+        "type": "Download CV",
+        "link": "https://drive.google.com/drive/folders/11Cfnh7getSdonTiVMNHxyx6xqjwY1shC?usp=sharing",
+        "icon": "/descarga.png",
+        "text": "Download CV"
+      }
+    ]
+  }
+}

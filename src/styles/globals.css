@@ -1,0 +1,296 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #1A73E8;
+  --color-secondary: #4D34A8;
+  --color-ternary: #81D9FA;
+  --color-light: #fff;
+  --color-dark: #333;
+  --font-family:'Nunito', Arial, Helvetica, sans-serif;
+  --font-size-small: 16px;
+  --font-size-medium: 20px;
+  --font-size-large: 48px;
+  --font-main-title: 700 var(--font-size-large) var(--font-family);
+  --font-main-subtitle: 700 var(--font-size-medium) var(--font-family);
+  --font-title: 700 var(--font-size-medium) var(--font-family);
+  
+  --default-box-shadow: 0px 0px 7px 3px rgba(0, 0, 0, 0.25);;
+
+  --background-gradient: linear-gradient(
+    110deg,
+    var(--color-ternary) 0%,
+    var(--color-ternary) 33.33%,
+    var(--color-secondary) 33.33%,
+    var(--color-secondary) 66.66%,
+    var(--color-primary) 66.66%
+  );
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+.bg {
+  animation:slide 30s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, var(--color-ternary) 50%, var(--color-primary) 50%);
+  bottom:0;
+  left:-50%;
+  opacity:.5;
+  position:fixed;
+  right:-50%;
+  top:0;
+  z-index:-1;
+}
+
+.bg2 {
+  animation-direction:alternate-reverse;
+  animation-duration:29s;
+}
+
+.bg3 {
+  animation-duration:37s;
+}
+@keyframes slide {
+  0% {
+    transform:translateX(-25%);
+  }
+  100% {
+    transform:translateX(25%);
+  }
+}
+
+body {
+  /*background: var(--background-gradient);*/
+  display: flex;
+  flex-direction: column;
+  padding: 30px 10%;
+  gap: 15px;
+  
+  font-family: var(--font-family)!important;
+  font-size: var(--font-size-small)!important;
+  align-items: center;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  
+  align-items: center;
+  
+  justify-content: space-between;
+}
+
+
+.main-title {
+  line-height: normal;
+}
+
+h1 {
+  color: var(--color-dark);
+  text-transform: capitalize;
+  font: var(--font-main-title);
+}
+
+h3 {
+  color: var(--color-light);
+  text-transform: uppercase;
+  font: var(--font-main-subtitle);
+}
+
+
+.profile-picture {
+  aspect-ratio: 1!important;
+  border-radius: 50%;
+  width: 200px!important;
+  box-shadow: var(--default-box-shadow);
+
+}
+.container-profile-picture { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 50%;
+  padding: 10px;
+  border: 10px solid var(--color-secondary);
+  box-shadow: var(--default-box-shadow);
+}
+
+
+/* Asumiendo que quieres añadir area0 a tu grid */
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; 
+  grid-template-rows: auto auto 1fr; 
+  grid-template-areas: 
+    "area0 area0 area0"
+    "area2 area1 area1"
+    "area3 area1 area1";
+  gap: 15px;
+  text-align: justify; /* Add this line to justify the text */
+}
+
+.area0-important {
+  grid-area: area0 !important;
+}
+
+.area3-important {
+  grid-area: area3 !important;
+}
+aside {
+  grid-area: area2;
+  display: flex;
+  flex-direction: column;
+  line-height: normal;
+  flex-grow: 1;
+  gap: 15px;
+  color: var(--color-dark);
+}
+
+article {
+  grid-area: area1;
+  display: flex;
+  flex-direction: column;
+  line-height: normal;
+  flex-grow: 1;
+  gap: 15px;
+  color: var(--color-dark);
+}
+
+section {
+  border-radius: 10px;
+  box-shadow: var(--default-box-shadow);
+  background-color: var(--color-light);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 30px 30px;
+}
+
+h2 {
+  border-bottom: 5px solid var(--color-secondary);
+  text-transform: uppercase;
+  font: var(--font-title);
+}
+h4 {
+  font-weight: 700;
+}
+p {
+}
+ol{
+  list-style-type: decimal;
+  list-style-position: outside;
+  padding-inline-start: 2em;
+}
+ul{
+  list-style-type: disc;
+  list-style-position: outside;
+  padding-inline-start: 2em;
+}
+li{
+  display: list-item;
+  text-align: -webkit-match-parent;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+a:hover {
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+}
+footer {
+  width: 100%;
+  display: flex;
+  border-radius: 10px;
+  
+  justify-content: center;
+  box-shadow: var(--default-box-shadow);
+  background-color: var(--color-light);
+}
+footer ul {
+  width: 100%;
+  padding: 15px;
+  gap: 15px;
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+}
+footer ul li {
+  width: 100%;
+  
+}
+footer ul li a:hover{
+  text-decoration: none;
+}
+.social-media {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  font-size: 14px;
+  border-radius: 10px;
+  color: var(--color-dark);
+  padding: 5px;
+  text-align: center;
+  gap: 5x;
+  transition: background-color 0.3s ease
+}
+.social-media:hover{
+  background-color: var(--color-ternary);
+}
+.social-media:active{
+  background-color: var(--color-primary);
+}
+.social-media-icon {
+  aspect-ratio: 1;
+  width: 30px;
+  align-self: center;
+}
+.social-media-text {
+  font-family: Nunito, sans-serif;
+}
+
+.upper {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.break {
+  display: block;
+}
+.bold {
+  font-weight: bold;
+}
+@media (max-width: 1100px) {
+  main {
+    grid-template-columns: 1fr; /* Esto cambia el layout a una sola columna */
+    grid-template-areas:
+      "area0"
+      "area2"
+      "area1"
+      "area3";
+  }
+  header {
+    flex-direction: column;
+  }
+  footer ul {
+    flex-direction: column;
+  }
+}
