@@ -1,8 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  basePath: '',
-  assetPrefix: '',
-  output: "export",
+  output: "export", // Exportar el sitio web como archivos estáticos
+  trailingSlash: true, // Agregar una barra al final de las rutas, ejemplo /about/
+  images: {
+    unoptimized: true, // Desactiva la optimización de imágenes
+  }, // Deshabilitar la optimización de imágenes
+
   webpack: (config, { isServer }) => {
     // Configura webpack para polling en lugar de los middleware de desarrollo
     config.watchOptions = {

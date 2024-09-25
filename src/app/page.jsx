@@ -1,7 +1,7 @@
 // pages/index.js
 import Background from "@/components/Background";
 import Header from "@/components/Header";
-import Main from "@/components/Main";
+import MainComponent from "@/components/MainComponent";
 import Footer from "@/components/Footer";
 import cvData from "../data/cvData.json";
 
@@ -10,7 +10,7 @@ export default function Home() {
     <>
       <Background />
       <Header data={cvData.header} />
-      <Main
+      <MainComponent
         summary={cvData.summary}
         education={cvData.education}
         professionalObjective={cvData.professionalObjective}

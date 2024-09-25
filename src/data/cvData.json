@@ -2,7 +2,7 @@
   "header": {
     "name": "Leonardo Axel Ortiz Zaragoza",
     "title": "STUDENT IN COMPUTER SYSTEMS ENGINEERING | ESCOM IPN",
-    "profilePicture": "/foto.jpg"
+    "profilePicture": "/photo.jpg"
   },
   "summary": "Full Stack Developer in training with hands-on experience in both front-end and back-end technologies. Proficient in building scalable web applications using React, Next.js, Golang, and Python. Familiar with cloud computing (AWS, Azure) and containerization tools (Docker). Eager to apply technical skills to innovative projects in a collaborative environment. Currently completing a degree in Computer Systems Engineering at ESCOM IPN, with a strong foundation in software engineering and networking.",
   "education": [
@@ -184,7 +184,7 @@
       {
         "type": "Download CV",
         "link": "https://drive.google.com/drive/folders/11Cfnh7getSdonTiVMNHxyx6xqjwY1shC?usp=sharing",
-        "icon": "/descarga.png",
+        "icon": "/download.png",
         "text": "Download CV"
       }
     ]
