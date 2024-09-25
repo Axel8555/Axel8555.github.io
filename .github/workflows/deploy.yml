@@ -24,7 +24,15 @@ jobs:
       - name: Build and export static site
         run: npm run build
 
-      # Paso 4: Desplegar a la rama main
+      # Paso 4: Crear el archivo .nojekyll en el directorio de salida
+      - name: Add .nojekyll file
+        run: touch ./out/.nojekyll
+
+      # Paso 5: Imprimir el contenido del directorio de salida
+      - name: List files in output directory
+        run: ls ./out #| head -n 30
+
+      # Paso 6: Desplegar a la rama main
       - name: Deploy to main
         uses: peaceiris/actions-gh-pages@v3
         with:
