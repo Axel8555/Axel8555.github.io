@@ -1,4 +1,5 @@
-// components/common/SkillsList.js
+// @/components/common/SkillsList.jsx
+
 export default function SkillsList({ title, skills, type }) {
     return (
       <>

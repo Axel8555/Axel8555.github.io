@@ -1,4 +1,5 @@
-// components/Footer.js
+// @/components/Footer.jsx
+
 export default function Footer({ contacts }) {
   return (
     <>

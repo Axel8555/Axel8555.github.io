@@ -1,9 +1,13 @@
-// components/Header.js
+// @/components/Header.jsx
+
+import Languages from "./Languages";
+
 export default function Header({ data }) {
   return (
     <>
       <header>
         <div className="main-title">
+          <Languages/>
           <h1>{data.name}</h1>
           <h3>{data.title}</h3>
         </div>

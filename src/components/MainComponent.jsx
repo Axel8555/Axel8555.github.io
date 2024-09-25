@@ -1,4 +1,5 @@
-// components/Main.js
+// @/components/MainComponent.jsx
+
 import ExperienceList from "./common/ExperienceList";
 import SkillsList from "./common/SkillsList";
 
@@ -10,7 +11,7 @@ export default function Main({
   softSkills,
   languages,
   academicExperience,
-  professionalExperience
+  professionalExperience,
 }) {
   return (
     <>
@@ -30,20 +31,25 @@ export default function Main({
                   className="upper break"
                   href={edu.link}
                   target="_blank"
-                  aria-label={`Sitio web de ${edu.institution}`}
+                  aria-label={`Website ${edu.institution}`}
                 >
-                  GRADUATION EXPECTED IN {edu.graduation} • {edu.institution}
+                  {edu.institution}
                 </a>
-                <br />
                 {edu.degree}.
               </p>
             ))}
           </section>
           <section>
-            <ExperienceList title="PROFESSIONAL EXPERIENCE" data={professionalExperience} />
+            <ExperienceList
+              title="PROFESSIONAL EXPERIENCE"
+              data={professionalExperience}
+            />
           </section>
           <section>
-            <ExperienceList title="ACADEMIC EXPERIENCE" data={academicExperience} />
+            <ExperienceList
+              title="ACADEMIC EXPERIENCE"
+              data={academicExperience}
+            />
           </section>
         </article>
         <aside>
@@ -52,12 +58,20 @@ export default function Main({
             <p>{professionalObjective}</p>
           </section>
           <section>
-            <SkillsList title="HARD SKILLS" skills={hardSkills} type="category" />
+            <SkillsList
+              title="HARD SKILLS"
+              skills={hardSkills}
+              type="category"
+            />
           </section>
         </aside>
         <aside className="area3-important">
           <section>
-            <SkillsList title="SOFT SKILLS" skills={softSkills} type="list" />
+            <SkillsList
+              title="SOFT SKILLS"
+              skills={softSkills}
+              type="list"
+            />
           </section>
           <section>
             <h2>LANGUAGES</h2>

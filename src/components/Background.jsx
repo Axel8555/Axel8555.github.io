@@ -1,3 +1,5 @@
+// @/components/Background.jsx
+
 export default function Background() {
     return (
         <>

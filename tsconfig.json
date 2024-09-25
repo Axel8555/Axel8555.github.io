@@ -20,8 +20,9 @@
     "paths": {
       "@/*": ["./src/*"],
       "@components/*": ["./src/components/*"],
-      "@styles/*": ["./src/styles/*"],
-      "@public/*": ["./public/*"]
+      "@data/*": ["./src/data/*"],
+      "@public/*": ["./public/*"],
+      "@styles/*": ["./src/styles/*"]
     }
   },
   "include": [
@@ -29,7 +30,8 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "src/app/layout.jsx"
-  ],
+    "src/app/layout.jsx",
+    "out/types/**/*.ts"
+, "src/components/Languages.jsx"  ],
   "exclude": ["node_modules"]
 }

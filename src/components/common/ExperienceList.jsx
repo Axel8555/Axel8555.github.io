@@ -1,4 +1,5 @@
-// components/common/ExperienceList.js
+// @/components/common/ExperienceList.jsx
+
 export default function ExperienceList({ title, data }) {
   return (
     <>

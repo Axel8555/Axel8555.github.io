@@ -1,0 +1,194 @@
+{
+  "header": {
+    "name": "Leonardo Axel Ortiz Zaragoza",
+    "title": "ESTUDIANTE DE INGENIERÍA EN SISTEMAS COMPUTACIONALES | ESCOM IPN",
+    "profilePicture": "/photo.jpg"
+  },
+  "summary": "Desarrollador Full Stack en formación con experiencia práctica en tecnologías de front-end y back-end. Competente en construir aplicaciones web escalables utilizando React, Next.js, Golang y Python. Familiarizado con la computación en la nube (AWS, Azure) y herramientas de contenedores (Docker). Ansioso por aplicar habilidades técnicas a proyectos innovadores en un entorno colaborativo. Actualmente completando una licenciatura en Ingeniería en Sistemas Computacionales en ESCOM IPN, con una sólida base en ingeniería de software y redes.",
+  "education": [
+    {
+      "institution": "ESCUELA SUPERIOR DE CÓMPUTO • INSTITUTO POLITÉCNICO NACIONAL",
+      "link": "https://www.escom.ipn.mx/",
+      "degree": "Ingeniería en Sistemas Computacionales"
+    }
+  ],
+  "professionalObjective": "Unirme a un equipo tecnológico dinámico donde pueda aprovechar mis habilidades en programación, computación en la nube y redes para desarrollar soluciones innovadoras y eficientes. Mi objetivo es contribuir a proyectos de vanguardia que promuevan el crecimiento empresarial y los avances tecnológicos. Apasionado por la resolución de problemas y la mejora continua, estoy dedicado a crear sistemas que destaquen en rendimiento y escalabilidad.",
+  "hardSkills": [
+    {
+      "category": "Frontend",
+      "skills": "HTML, CSS, JavaScript, TypeScript, React, Next.js"
+    },
+    {
+      "category": "Backend y Programación",
+      "skills": "Golang, Python, Java, C, Ensamblador"
+    },
+    {
+      "category": "Tecnologías API",
+      "skills": "GraphQL, Hasura, REST"
+    },
+    { "category": "Bases de Datos", "skills": "SQL Server, PostgreSQL" },
+    {
+      "category": "Servicios de Redes",
+      "skills": "DHCP, DNS, FTP, SNMP"
+    },
+    {
+      "category": "Simulación de Redes",
+      "skills": "GNS3, Cisco Packet Tracer"
+    },
+    { "category": "Nube", "skills": "Microsoft Azure, Amazon Web Services" },
+    {
+      "category": "Contenerización",
+      "skills": "Docker (para desplegar y gestionar contenedores)"
+    },
+    { "category": "Sistemas Operativos", "skills": "Linux Ubuntu y Debian" },
+    { "category": "Colaboración", "skills": "GitHub, Figma, Trello" },
+    {
+      "category": "Análisis de Datos",
+      "skills": "KNIME, Excel Avanzado, Power BI, Pandas y Numpy"
+    }
+  ],
+  "softSkills": [
+    "Comunicación Efectiva",
+    "Adaptabilidad",
+    "Resolución Creativa de Problemas",
+    "Espíritu de Trabajo en Equipo",
+    "Autoaprendizaje y Mejora Continua",
+    "Integridad Profesional"
+  ],
+  "languages": [
+    { "language": "Español", "level": "Nativo" },
+    { "language": "Inglés", "level": "B2" }
+  ],
+  "academicExperience": [
+    {
+      "title": "Primer lugar en Expo ESCOM 2023",
+      "subtitle": "Ingeniería de Software - CircuitToolbox.com",
+      "link": "https://drive.google.com/file/d/1oOotgQFq6Yp-eZvBnBDyT13NRzQxb8cl/view?usp=sharing",
+      "details": [
+        "Desarrollé una plataforma web con utilidades y calculadoras electrónicas utilizando Next.js para el frontend.",
+        "Creé un microservicio backend en Golang, utilizando sockets TCP para la comunicación.",
+        "Desplegado exitosamente en AWS."
+      ]
+    },
+    {
+      "title": "Diseño de un Procesador Monociclo de 32 bits",
+      "subtitle": "Arquitectura RISC-V con Intel Quartus",
+      "details": [
+        "Diseñé un procesador monociclo de 32 bits con arquitectura RISC-V usando Intel Quartus.",
+        "Probé exitosamente el diseño en una FPGA."
+      ]
+    },
+    {
+      "title": "Herramientas de Encriptación y Desencriptación",
+      "subtitle": "Algoritmos AES y RSA",
+      "details": [
+        "Desarrollé herramientas para encriptación de archivos, aplicando algoritmos AES y RSA para protección de datos, firma digital y verificación."
+      ]
+    },
+    {
+      "title": "Semifinalista en Hackathon Talent Land 2023 ",
+      "subtitle": "Track Salud Digna",
+      "link": "https://drive.google.com/file/d/1oIJ1tpl7-OPesHTgqGbgsxoADEEbZiUZ/view?usp=sharing",
+      "details": [
+        "Desarrollé un sistema utilizando la API de ChatGPT 3.5 para recomendar recetas saludables y facilitar la comunicación con nutricionistas.",
+        "Integré una base de datos de ingredientes y recetas para recomendaciones dietéticas precisas."
+      ]
+    },
+    {
+      "title": "Voltímetro Inalámbrico con Interfaz Web",
+      "details": [
+        "Diseñé un sensor de voltaje (0V - 60V).",
+        "Usé un microcontrolador PIC16F628A.",
+        "Desarrollé un microservicio para comunicación Bluetooth y construí una interfaz web usando Next.js."
+      ]
+    },
+    {
+      "title": "Desarrollo de un Cañón Controlado por DSPIC con App Android",
+      "details": [
+        "Diseñé y programé un cañón controlado vía microcontrolador DSPIC.",
+        "Creé una aplicación Android para control por Bluetooth del cañón."
+      ]
+    },
+    {
+      "title": "Pseudo-traductor (Inglés-Español) con Detección de Errores",
+      "details": [
+        "Construí un sistema de traducción usando Next.js y Python con distancia de Levenshtein para detección y corrección de errores.",
+        "Implementé almacenamiento de datos usando PostgreSQL 15."
+      ]
+    },
+    {
+      "title": "Aplicación de Catálogo y Cuidado de Plantas",
+      "details": [
+        "Desarrollé una app Android en Java que proporciona instrucciones detalladas de cuidado para varias especies de plantas."
+      ]
+    },
+    {
+      "title": "Sitio Web de Comercio Electrónico",
+      "details": [
+        "Diseñé y documenté una plataforma de comercio electrónico ficticia para una concesionaria de automóviles."
+      ]
+    },
+    {
+      "title": "Desarrollo de Bot para Discord",
+      "details": [
+        "Creé un bot para Discord en Node.js que procesa texto y genera respuestas de voz vía una API."
+      ]
+    }
+  ],
+  "professionalExperience": [
+    {
+      "title": "Tecnologías en la Nube",
+      "details": [
+        "Gestioné entornos en la nube utilizando máquinas virtuales, Azure Functions, balanceo de carga y sistemas distribuidos en Microsoft Azure y AWS."
+      ]
+    },
+    {
+      "title": "Gestión de Servidores On-premise",
+      "details": [
+        "Administré servidores locales (Dell R360) para desplegar servicios web y aplicaciones, asegurando un hosting eficiente y seguro para varios servicios."
+      ]
+    },
+    {
+      "title": "Normalización, Transformación y Visualización de Datos",
+      "details": [
+        "Normalicé y transformé formatos de datos de Excel usando Power Query y presenté dashboards interactivos vía Power BI."
+      ]
+    },
+    {
+      "title": "Redes",
+      "details": [
+        "Diseñé y configuré topologías de red usando routers y switches Cisco Layer 3, junto con máquinas virtuales en GNS3.",
+        "Configuré servicios de red como DHCP, DNS, FTP y SNMP en plataformas Linux.",
+        "Simulé infraestructuras de red en Cisco Packet Tracer, aplicando protocolos de enrutamiento y conmutación como OSPF y EIGRP."
+      ]
+    }
+  ],
+  "footer": {
+    "contacts": [
+      {
+        "type": "Correo Electrónico",
+        "link": "mailto:leonardoaxelortiz@gmail.com",
+        "icon": "/email.png",
+        "text": "leonardoaxelortiz@gmail.com"
+      },
+      {
+        "type": "GitHub",
+        "link": "https://github.com/Axel8555",
+        "icon": "/github.png",
+        "text": "github.com/Axel8555"
+      },
+      {
+        "type": "LinkedIn",
+        "link": "https://www.linkedin.com/in/laoz8555/",
+        "icon": "/linkedin.png",
+        "text": "linkedin.com/in/laoz8555"
+      },
+      {
+        "type": "Descargar CV",
+        "link": "https://drive.google.com/drive/folders/11Cfnh7getSdonTiVMNHxyx6xqjwY1shC?usp=sharing",
+        "icon": "/download.png",
+        "text": "Descargar CV"
+      }
+    ]
+  }
+}
