@@ -15,7 +15,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
         with:
-          fetch-depth: 0
+          fetch-depth: 0  # Asegura que se obtengan todas las ramas y el historial completo
 
       # Paso 2: Instalar las dependencias del proyecto
       - name: Install dependencies
@@ -36,17 +36,20 @@ jobs:
           git config --global user.name "GitHub Actions Bot"
           git checkout main
 
-      # Paso 6: Copiar archivos exportados a la rama main
-      - name: Copy output to main branch
+      # Paso 6: Limpiar archivos excepto .git y .github
+      - name: Clean current directory except .git and .github
         run: |
-          rm -rf ./*
-          cp -r ./out/* ./
+          find . -mindepth 1 -not -name '.git' -not -name '.github' -delete
 
-      # Paso 7: Commit y push a la rama main usando GITHUB_TOKEN
+      # Paso 7: Copiar los archivos exportados al directorio actual
+      - name: Copy output to main branch
+        run: cp -r ./out/* ./
+
+      # Paso 8: Commit y push a la rama main usando GITHUB_TOKEN
       - name: Commit and push to main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git add .
-          git commit -m "Deploy sitio estático desde develop"
+          git commit -m "Deploy static site from develop"
           git push origin main
