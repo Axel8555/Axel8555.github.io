@@ -14,6 +14,8 @@ jobs:
       # Paso 1: Checkout del código en la rama develop
       - name: Checkout repository
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 0  # Asegura que se obtengan todas las ramas y el historial completo
 
       # Paso 2: Instalar las dependencias del proyecto
       - name: Install dependencies
@@ -23,7 +25,7 @@ jobs:
       - name: Build and export static site
         run: npm run build
         
-      # Paso 4: Checkout de la rama main para el despliegue
+      # Paso 4: Hacer checkout de la rama main
       - name: Checkout main branch
         run: |
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
