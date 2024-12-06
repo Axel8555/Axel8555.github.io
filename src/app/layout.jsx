@@ -29,7 +29,6 @@ export default function RootLayout({ children }) {
     <html>
       <body className="flex flex-col py-8 px-[10%] gap-4">
         <Background />
-
         <div className="flex flex-col items-center gap-4">{children}</div>
       </body>
     </html>

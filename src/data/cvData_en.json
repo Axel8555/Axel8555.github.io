@@ -26,7 +26,10 @@
       "category": "API Technologies",
       "skills": "GraphQL, Hasura, REST"
     },
-    { "category": "Databases", "skills": "SQL Server, PostgreSQL" },
+    {
+      "category": "Databases",
+      "skills": "SQL Server, PostgreSQL"
+    },
     {
       "category": "Networking Services",
       "skills": "DHCP, DNS, FTP, SNMP"
@@ -35,14 +38,26 @@
       "category": "Networking simulation",
       "skills": "GNS3, Cisco Packet Tracer"
     },
-    { "category": "Cloud", "skills": "Microsoft Azure, Amazon Web Services" },
+    {
+      "category": "Cloud",
+      "skills": "Microsoft Azure, Amazon Web Services"
+    },
     {
       "category": "Containerization",
       "skills": "Docker (for deploying and managing containers)"
     },
-    { "category": "Operating Systems", "skills": "Linux Ubuntu & Debian" },
-    { "category": "Collaboration", "skills": "GitHub, Figma, Trello" },
-    { "category": "Data analysis", "skills": "KNIME, Advanced Excel, Power BI, Pandas & Numpy" }
+    {
+      "category": "Operating Systems",
+      "skills": "Linux Ubuntu & Debian"
+    },
+    {
+      "category": "Collaboration",
+      "skills": "GitHub, Figma, Trello"
+    },
+    {
+      "category": "Data analysis",
+      "skills": "KNIME, Advanced Excel, Power BI, Pandas & Numpy"
+    }
   ],
   "softSkills": [
     "Effective Communication",
@@ -53,8 +68,14 @@
     "Professional Integrity"
   ],
   "languages": [
-    { "language": "Spanish", "level": "Native" },
-    { "language": "English", "level": "B2" }
+    {
+      "language": "Spanish",
+      "level": "Native"
+    },
+    {
+      "language": "English",
+      "level": "B2"
+    }
   ],
   "academicExperience": [
     {
@@ -133,6 +154,22 @@
     }
   ],
   "professionalExperience": [
+    {
+      "title": "Inventory Management System",
+      "details": [
+        "Developed an inventory management system with Next.js for the frontend and GraphQL.",
+        "Used Hasura to map the MSSQL database to GraphQL and manage remote schemas.",
+        "Created an API in Golang with GraphQL to perform custom mutations with advanced business logic.",
+        "Utilized Hasura to transform REST requests into usable GraphQL mutations, using Hasura Actions to transform the payload."
+      ]
+    },
+    {
+      "title": "Thermal Label Generation and Printing System",
+      "details": [
+        "Developed a system for generating and printing thermal labels using Python PIL (QR, DataMatrix, Code128).",
+        "Created an endpoint with FastAPI and used brother_ql for rasterizing and sending commands to the thermal printer."
+      ]
+    },
     {
       "title": "Cloud Technologies",
       "details": [

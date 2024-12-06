@@ -83,6 +83,16 @@ export default function Main({
               ))}
             </ul>
           </section>
+          <section>
+            <p>
+              <a
+                href="https://axel8555.github.io"
+                aria-label="Website"
+              >
+                axel8555.github.io
+              </a>
+            </p>
+          </section>
         </aside>
       </main>
     </>

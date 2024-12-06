@@ -26,7 +26,10 @@
       "category": "Tecnologías API",
       "skills": "GraphQL, Hasura, REST"
     },
-    { "category": "Bases de Datos", "skills": "SQL Server, PostgreSQL" },
+    {
+      "category": "Bases de Datos",
+      "skills": "SQL Server, PostgreSQL"
+    },
     {
       "category": "Servicios de Redes",
       "skills": "DHCP, DNS, FTP, SNMP"
@@ -35,13 +38,22 @@
       "category": "Simulación de Redes",
       "skills": "GNS3, Cisco Packet Tracer"
     },
-    { "category": "Nube", "skills": "Microsoft Azure, Amazon Web Services" },
+    {
+      "category": "Nube",
+      "skills": "Microsoft Azure, Amazon Web Services"
+    },
     {
       "category": "Contenerización",
       "skills": "Docker (para desplegar y gestionar contenedores)"
     },
-    { "category": "Sistemas Operativos", "skills": "Linux Ubuntu y Debian" },
-    { "category": "Colaboración", "skills": "GitHub, Figma, Trello" },
+    {
+      "category": "Sistemas Operativos",
+      "skills": "Linux Ubuntu y Debian"
+    },
+    {
+      "category": "Colaboración",
+      "skills": "GitHub, Figma, Trello"
+    },
     {
       "category": "Análisis de Datos",
       "skills": "KNIME, Excel Avanzado, Power BI, Pandas y Numpy"
@@ -56,8 +68,14 @@
     "Integridad Profesional"
   ],
   "languages": [
-    { "language": "Español", "level": "Nativo" },
-    { "language": "Inglés", "level": "B2" }
+    {
+      "language": "Español",
+      "level": "Nativo"
+    },
+    {
+      "language": "Inglés",
+      "level": "B2"
+    }
   ],
   "academicExperience": [
     {
@@ -136,6 +154,22 @@
     }
   ],
   "professionalExperience": [
+    {
+      "title": "Sistema de Gestión de Inventarios",
+      "details": [
+        "Desarrollé un sistema de gestión de inventarios con Next.js para el frontend y GraphQL.",
+        "Utilicé Hasura para mapear la base de datos MSSQL a GraphQL y gestionar esquemas remotos.",
+        "Creé una API en Golang con GraphQL para realizar mutaciones personalizadas con lógica de negocio avanzada.",
+        "Utilicé Hasura para transformar solicitudes REST en mutaciones GraphQL utilizables, usando Hasura Actions para transformar el payload."
+      ]
+    },
+    {
+      "title": "Sistema de Generación e Impresión de Etiquetas Térmicas",
+      "details": [
+        "Desarrollé un sistema para generar e imprimir etiquetas térmicas utilizando Python PIL (QR, DataMatrix, Code128).",
+        "Creé un endpoint con FastAPI y utilicé brother_ql para rasterizar y enviar comandos a la impresora térmica."
+      ]
+    },
     {
       "title": "Tecnologías en la Nube",
       "details": [

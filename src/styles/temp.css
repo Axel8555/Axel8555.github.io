@@ -1,0 +1,24 @@
+.footer {
+  width: 100%;
+  display: flex;
+  border-radius: 10px;
+  
+  justify-content: center;
+  box-shadow: var(--default-box-shadow);
+  background-color: var(--color-light);
+}
+.footer .ul {
+  width: 100%;
+  padding: 15px;
+  gap: 15px;
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+}
+.footer .ul .li {
+  width: 100%;
+  
+}
+.footer ul li a:hover{
+  text-decoration: none;
+}

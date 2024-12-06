@@ -7,7 +7,7 @@ export default function Header({ data }) {
     <>
       <header>
         <div className="main-title">
-          <Languages/>
+          <Languages />
           <h1>{data.name}</h1>
           <h3>{data.title}</h3>
         </div>
