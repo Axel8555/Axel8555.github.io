@@ -1,5 +1,6 @@
 // app/layout.jsx
 
+import { ReactNode } from "react";
 import "@/styles/globals.css";
 import "@/styles/font-styles.css";
 import Background from "@/components/Background";
@@ -13,21 +14,12 @@ export const metadata = {
   },
 };
 
-// body {
-//   /*background: var(--background-gradient);*/
-//   display: flex;
-//   flex-direction: column;
-//   padding: 30px 10%;
-//   gap: 15px;
 
-//   font-family: var(--font-family)!important;
-//   font-size: var(--font-size-small)!important;
-//   align-items: center;
-// }
-export default function RootLayout({ children }) {
+export default function RootLayout({ children }: { children: ReactNode }) {
+  
   return (
     <html>
-      <body className="flex flex-col py-8 px-[10%] gap-4">
+      <body className="flex flex-col py-8 px-[10%] gap-4 dark:bg-black">
         <Background />
         <div className="flex flex-col items-center gap-4">{children}</div>
       </body>

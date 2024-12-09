@@ -25,6 +25,9 @@
       "@/*": [
         "./src/*"
       ],
+      "@app/*": [
+        "./src/app/*"
+      ],
       "@components/*": [
         "./src/components/*"
       ],
@@ -46,9 +49,9 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "svgr.d.ts",
-    "src/app/layout.jsx",
+    "src/app/layout.tsx",
     "out/types/**/*.ts",
-    "src/components/Languages.jsx"
+    "src/components/Languages.tsx"
   ],
   "exclude": [
     "node_modules"
