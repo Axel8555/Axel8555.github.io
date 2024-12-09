@@ -5,6 +5,7 @@ import { Code, Mail } from "lucide-react";
 import Github from "@public/icons/github.svg";
 import Linkedin from "@public/icons/linkedin.svg";
 import Languages from "./Languages";
+import { ModeToggle } from "./ModeToggle";
 
 export default function Page({
   data: { name, title },
@@ -17,8 +18,8 @@ export default function Page({
   return (
     <header className="flex flex-col md:flex-row justify-between items-center gap-6">
       <div className="space-y-4 text-center md:text-left">
-        
-      <Languages />
+        <Languages />
+        <ModeToggle />
         <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-blue-400">
           Leonardo Axel Ortiz
         </h1>
@@ -61,8 +62,8 @@ export default function Page({
           height={150}
           className="rounded-full border-4 border-indigo-400 shadow-lg"
         />
-        <span className="absolute bottom-0 right-0 bg-zinc-100 rounded-full p-2 shadow-md">
-          <Code className="h-6 w-6 text-slate-900" />
+        <span className="absolute bottom-0 right-0 bg-zinc-100 dark:bg-black rounded-full p-2 shadow-md border-2">
+          <Code className="h-6 w-6 text-zinc-900 dark:text-white " />
         </span>
       </div>
     </header>
