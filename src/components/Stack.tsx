@@ -1,9 +1,6 @@
 "use client";
 import {
   FaReact,
-  FaVuejs,
-  FaAngular,
-  FaNodeJs,
   FaDocker,
   FaGit,
   FaJava,
@@ -13,14 +10,10 @@ import {
   FaAws,
   FaFigma,
   FaTrello,
+  FaArrowLeft,
+  FaArrowRight,
 } from "react-icons/fa";
 import {
-  SiDjango,
-  SiFlask,
-  SiTerraform,
-  SiWebpack,
-  SiBabel,
-  SiKubernetes,
   SiTypescript,
   SiJavascript,
   SiGraphql,
@@ -33,8 +26,8 @@ import {
 } from "react-icons/si";
 import { Card, CardContent } from "./ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
-import { color, motion } from "framer-motion";
-import { JSX, useState } from "react";
+import { motion } from "framer-motion";
+import { JSX, useState, useEffect } from "react";
 import React from "react";
 
 interface TechItem {
@@ -176,31 +169,72 @@ const TechCategory = ({ category }: TechCategoryProps) => (
 export default function Stack() {
   const [activeTab, setActiveTab] = useState("Frontend");
 
+  const handlePrev = () => {
+    const categoryNames = technologies.map((category) => category.name);
+    const currentIndex = categoryNames.indexOf(activeTab);
+    const prevIndex =
+      (currentIndex - 1 + categoryNames.length) % categoryNames.length;
+    setActiveTab(categoryNames[prevIndex]);
+  };
+
+  const handleNext = () => {
+    const categoryNames = technologies.map((category) => category.name);
+    const currentIndex = categoryNames.indexOf(activeTab);
+    const nextIndex = (currentIndex + 1) % categoryNames.length;
+    setActiveTab(categoryNames[nextIndex]);
+  };
+
+  useEffect(() => {
+    const categoryNames = technologies.map((category) => category.name);
+    let currentIndex = categoryNames.indexOf(activeTab);
+    const interval = setInterval(() => {
+      currentIndex = (currentIndex + 1) % categoryNames.length;
+      setActiveTab(categoryNames[currentIndex]);
+    }, 5000); // Cambia cada 5 segundos
+
+    return () => clearInterval(interval);
+  }, [activeTab]);
+
   return (
     <section className="space-y-6">
       <h2 className="text-3xl font-semibold text-center">Tech Stack</h2>
-      <Tabs
-        value={activeTab}
-        onValueChange={setActiveTab}
-      >
-        <TabsList className="flex overflow-x-auto mb-8">
+      <section className="flex flex-row space-x-6">
+        <button
+          onClick={handlePrev}
+          className="mx-2 mt-2 self-start"
+        >
+          <FaArrowLeft size={20} />
+        </button>
+        <Tabs
+          value={activeTab}
+          onValueChange={setActiveTab}
+          className="flex-grow"
+        >
+          <TabsList className="flex overflow-x-auto mb-8">
+            {technologies.map((category) => (
+              <TabsTrigger
+                key={category.name}
+                value={category.name}
+                className="flex-grow text-center"
+              >
+                {category.name}
+              </TabsTrigger>
+            ))}
+          </TabsList>
           {technologies.map((category) => (
-            <TabsTrigger
+            <TechCategory
               key={category.name}
-              value={category.name}
-              className="flex-grow text-center"
-            >
-              {category.name}
-            </TabsTrigger>
+              category={category}
+            />
           ))}
-        </TabsList>
-        {technologies.map((category) => (
-          <TechCategory
-            key={category.name}
-            category={category}
-          />
-        ))}
-      </Tabs>
+        </Tabs>
+        <button
+          onClick={handleNext}
+          className="mx-2 mt-2 self-start"
+        >
+          <FaArrowRight size={20} />
+        </button>
+      </section>
     </section>
   );
 }
