@@ -1,6 +1,7 @@
 // app/es/page.jsx
 
 import Header from "@/components/Header";
+import Stack from "@/components/Stack";
 import cvData from "@/data/cvData_en.json";
 
 export const metadata = {
@@ -14,6 +15,7 @@ export default function Page() {
   return (
     <>
       <Header data={cvData.header} />
+      <Stack></Stack>
     </>
   );
 }

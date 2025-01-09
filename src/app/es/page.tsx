@@ -2,6 +2,7 @@
 
 import Header from "@/components/Header";
 import cvData from "@/data/cvData_es.json";
+import English from "@app/en/page";
 
 export const metadata = {
   title: "Leonardo Axel Ortiz Zaragoza",
@@ -12,7 +13,8 @@ export const metadata = {
 export default function Page() {
   return (
     <>
-      <Header data={cvData.header} />
+      {/* <Header data={cvData.header} /> */}
+      <English />
     </>
   );
 }

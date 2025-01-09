@@ -1,11 +1,11 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Code, Mail } from "lucide-react";
-import Github from "@public/icons/github.svg";
-import Linkedin from "@public/icons/linkedin.svg";
+import { Mail, Terminal } from "lucide-react";
 import Languages from "./Languages";
 import { ModeToggle } from "./ModeToggle";
+import { LuGithub, LuLinkedin } from "react-icons/lu";
 
 export default function Page({
   data: { name, title },
@@ -27,31 +27,45 @@ export default function Page({
           Fullstack Developer & Computer Systems Engineer
         </p>
         <div className="flex justify-center md:justify-start gap-4">
-          <Button
-            onClick={() => window.open("", "_blank")}
-            size="sm"
-            variant="outline"
-            className="rounded-full"
+          <Link
+            href="https://github.com/Axel8555"
+            passHref
           >
-            <Github className="mr-2 w-4 h-4" />
-            GitHub
-          </Button>
-          <Button
-            size="sm"
-            variant="outline"
-            className="rounded-full"
+            <Button
+              size="sm"
+              variant="outline"
+              className="rounded-full"
+            >
+              <LuGithub className="mr-2 w-4 h-4" />
+              GitHub
+            </Button>
+          </Link>
+          <Link
+            href="https://linkedin.com/in/laoz8555n"
+            passHref
           >
-            <Linkedin className="mr-2 h-4 w-4" />
-            LinkedIn
-          </Button>
-          <Button
-            size="sm"
-            variant="outline"
-            className="rounded-full"
+            <Button
+              size="sm"
+              variant="outline"
+              className="rounded-full"
+            >
+              <LuLinkedin className="mr-2 h-4 w-4" />
+              LinkedIn
+            </Button>
+          </Link>
+          <Link
+            href="mailto:leonardoaxelortiz@gmail.com"
+            passHref
           >
-            <Mail className="mr-2 h-4 w-4" />
-            Email
-          </Button>
+            <Button
+              size="sm"
+              variant="outline"
+              className="rounded-full"
+            >
+              <Mail className="mr-2 h-4 w-4" />
+              Email
+            </Button>
+          </Link>
         </div>
       </div>
       <div className="relative">
@@ -63,7 +77,7 @@ export default function Page({
           className="rounded-full border-4 border-indigo-400 shadow-lg"
         />
         <span className="absolute bottom-0 right-0 bg-zinc-100 dark:bg-black rounded-full p-2 shadow-md border-2">
-          <Code className="h-6 w-6 text-zinc-900 dark:text-white " />
+          <Terminal className="h-6 w-6 text-zinc-900 dark:text-white " />
         </span>
       </div>
     </header>
