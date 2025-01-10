@@ -27,7 +27,11 @@ interface CategoryProps {
 
 function CategoryContent({ category }: CategoryProps) {
     return (
-        <TabsContent key={category.name} value={category.name} className="mt-4">
+        <TabsContent
+            key={category.name}
+            value={category.name}
+            className="mt-4 min-w-fit overflow-auto"
+        >
             <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-6">
                 {category.items.map((item) => (
                     <motion.div
@@ -97,22 +101,26 @@ export function CategoryTabs({
     }, [activeTab, setActiveTab, tabContent])
 
     return (
-        <section className="width-full flex flex-row space-x-4 p-4 pt-2">
+        <section className="space-x-4 p-4 pt-2">
             <Button
                 onClick={handlePrev}
-                className="mt-0.5 self-start rounded-full"
+                className="mt-0.5 flex-shrink-0 self-start rounded-full"
                 size="sm"
                 variant="outline"
             >
                 <FaArrowLeft size={20} />
             </Button>
-            <Tabs value={activeTab} onValueChange={setActiveTab}>
-                <TabsList className="space-x-4 overflow-x-auto">
+            <Tabs
+                value={activeTab}
+                onValueChange={setActiveTab}
+                // className="flex-grow"
+            >
+                <TabsList className="flex min-h-fit space-x-4">
                     {tabContent.map((category) => (
                         <TabsTrigger
                             key={category.name}
                             value={category.name}
-                            className="flex-grow text-center"
+                            // className="whitespace-nowrap text-center"
                         >
                             {category.name}
                         </TabsTrigger>
@@ -124,7 +132,7 @@ export function CategoryTabs({
             </Tabs>
             <Button
                 onClick={handleNext}
-                className="mt-0.5 self-start rounded-full"
+                className="mt-0.5 flex-shrink-0 self-start rounded-full"
                 size="sm"
                 variant="outline"
             >
