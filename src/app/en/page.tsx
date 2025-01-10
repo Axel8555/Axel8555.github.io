@@ -1,6 +1,7 @@
 // app/es/page.jsx
 
 import Header from "@/components/Header";
+import Proyects from "@/components/Proyects";
 import Stack from "@/components/Stack";
 import cvData from "@/data/cvData_en.json";
 
@@ -16,6 +17,7 @@ export default function Page() {
     <>
       <Header data={cvData.header} />
       <Stack></Stack>
+      <Proyects></Proyects>
     </>
   );
 }

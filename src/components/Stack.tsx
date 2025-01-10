@@ -99,10 +99,10 @@ export function CategoryTabs({
   }, [activeTab, setActiveTab, tabContent]);
 
   return (
-    <section className="flex flex-row space-x-6">
+    <section className="flex flex-row space-x-4">
       <Button
         onClick={handlePrev}
-        className="mx-2 mt-0.5 self-start rounded-full"
+        className="mt-0.5 self-start rounded-full"
         size="sm"
         variant="outline"
       >
@@ -133,7 +133,7 @@ export function CategoryTabs({
       </Tabs>
       <Button
         onClick={handleNext}
-        className="mx-2 mt-0.5 self-start rounded-full"
+        className="mt-0.5 self-start rounded-full"
         size="sm"
         variant="outline"
       >
