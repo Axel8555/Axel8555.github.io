@@ -73,8 +73,8 @@ export default function Proyects() {
               <CardContent className="space-y-4">
                 <p className="text-muted-foreground">{project.description}</p>
                 <div className="flex flex-wrap gap-2">
-                  {project.techStack.map((tech) => (
-                    <>{tech}</>
+                  {project.techStack.map((tech, i) => (
+                    <span key={i}>{tech}</span>
                   ))}
                 </div>
               </CardContent>
