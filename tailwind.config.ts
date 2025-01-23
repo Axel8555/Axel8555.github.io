@@ -50,6 +50,10 @@ const config: Config = {
           "4": "hsl(var(--chart-4))",
           "5": "hsl(var(--chart-5))",
         },
+        indigo: {
+          "975": "hsl(240, 100%, 5%)",
+          "985": "hsl(240, 100%, 3%)",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
