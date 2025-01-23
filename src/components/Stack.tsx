@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/button'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { Card, CardContent } from '@/components/ui/card'
 import { techStack } from '@/data/techStack'
+import { ScrollArea } from '@radix-ui/react-scroll-area'
 
 const iconSize = 24
 
@@ -101,38 +102,47 @@ export function CategoryTabs({
     }, [activeTab, setActiveTab, tabContent])
 
     return (
-        <section className="space-x-4 p-4 pt-2">
+        <section className="flex w-full max-w-full flex-row items-center justify-between space-x-4 py-4 pt-2">
+            {/* Botón izquierdo con tamaño fijo */}
             <Button
                 onClick={handlePrev}
-                className="mt-0.5 flex-shrink-0 self-start rounded-full"
+                className="mt-0.5 self-start rounded-full"
                 size="sm"
                 variant="outline"
             >
                 <FaArrowLeft size={20} />
             </Button>
+
+            {/* Contenedor de Tabs ajustable */}
             <Tabs
                 value={activeTab}
                 onValueChange={setActiveTab}
-                // className="flex-grow"
+                className="max-w-[calc(100%-56px-56px)] flex-1" // Ajusta el ancho máximo restando 40px
             >
-                <TabsList className="flex min-h-fit space-x-4">
-                    {tabContent.map((category) => (
-                        <TabsTrigger
-                            key={category.name}
-                            value={category.name}
-                            // className="whitespace-nowrap text-center"
-                        >
-                            {category.name}
-                        </TabsTrigger>
-                    ))}
-                </TabsList>
-                {/* {tabContent.map((category) => (
+                {/* ScrollArea para el contenido desplazable */}
+                <ScrollArea className="flex flex-1 overflow-x-auto rounded-lg">
+                    <TabsList className="w-max flex-1 space-x-4">
+                        {tabContent.map((category) => (
+                            <TabsTrigger
+                                key={category.name}
+                                value={category.name}
+                                className="min-w-[100px]" // Tamaño fijo para los botones
+                            >
+                                {category.name}
+                            </TabsTrigger>
+                        ))}
+                    </TabsList>
+                </ScrollArea>
+
+                {tabContent.map((category) => (
                     <CategoryContent key={category.name} category={category} />
-                ))} */}
+                ))}
             </Tabs>
+
+            {/* Botón derecho con tamaño fijo */}
             <Button
                 onClick={handleNext}
-                className="mt-0.5 flex-shrink-0 self-start rounded-full"
+                className="mt-0.5 self-start rounded-full"
                 size="sm"
                 variant="outline"
             >
