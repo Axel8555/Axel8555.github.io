@@ -18,7 +18,7 @@ export default function Languages() {
                     <Globe />
                 </Button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent align="end">
+            <DropdownMenuContent align="start">
                 <DropdownMenuItem>
                     <Link href="/en/">English</Link>
                 </DropdownMenuItem>

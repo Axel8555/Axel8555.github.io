@@ -16,6 +16,7 @@ export function ModeToggle() {
     const { theme, setTheme } = useTheme()
 
     const isActive = (currentTheme: string) => theme === currentTheme
+    const bg = (enable: boolean) => (enable ? 'bg-secondary' : '')
 
     return (
         <DropdownMenu>
@@ -26,28 +27,22 @@ export function ModeToggle() {
                     <span className="sr-only">Toggle theme</span>
                 </Button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent align="end">
+            <DropdownMenuContent align="start">
                 <DropdownMenuItem
                     onClick={() => setTheme('system')}
-                    className={
-                        isActive('system') ? 'bg-secondary bg-opacity-50' : ''
-                    }
+                    className={bg(isActive('system'))}
                 >
-                    System
+                    Systems
                 </DropdownMenuItem>
                 <DropdownMenuItem
                     onClick={() => setTheme('light')}
-                    className={
-                        isActive('light') ? 'bg-secondary bg-opacity-50' : ''
-                    }
+                    className={bg(isActive('light'))}
                 >
                     Light
                 </DropdownMenuItem>
                 <DropdownMenuItem
                     onClick={() => setTheme('dark')}
-                    className={
-                        isActive('dark') ? 'bg-secondary bg-opacity-50' : ''
-                    }
+                    className={bg(isActive('dark'))}
                 >
                     Dark
                 </DropdownMenuItem>
