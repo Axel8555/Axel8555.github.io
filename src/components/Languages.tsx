@@ -1,13 +1,31 @@
 // @/components/Languages.jsx
 
-import Link from "next/link";
+import Link from 'next/link'
+import {
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuItem,
+    DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu'
+import { Button } from '@/components/ui/button'
+import { Globe } from 'lucide-react'
 
 export default function Languages() {
-  return (
-    <div className="flex mb-2 gap-2 text-slate-400">
-      <Link href="/en/">English</Link>
-      {"."}
-      <Link href="/es/">Español</Link>
-    </div>
-  );
+    return (
+        <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+                <Button variant="outline" size="icon">
+                    <Globe />
+                </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end">
+                <DropdownMenuItem>
+                    <Link href="/en/">English</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem>
+                    <Link href="/es/">Español</Link>
+                </DropdownMenuItem>
+            </DropdownMenuContent>
+        </DropdownMenu>
+    )
 }

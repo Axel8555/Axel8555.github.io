@@ -31,9 +31,9 @@ function CategoryContent({ category }: CategoryProps) {
         <TabsContent
             key={category.name}
             value={category.name}
-            className="mt-4 min-w-fit overflow-auto"
+            className="mt-4 min-h-fit min-w-fit overflow-hidden p-1"
         >
-            <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-6">
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6">
                 {category.items.map((item) => (
                     <motion.div
                         key={item.name}
@@ -52,7 +52,7 @@ function CategoryContent({ category }: CategoryProps) {
                                             minHeight: iconSize,
                                         },
                                     })}
-                                <span className="whitespace-nowrap text-sm">
+                                <span className="truncate whitespace-nowrap text-sm">
                                     {item.name}
                                 </span>
                             </CardContent>
