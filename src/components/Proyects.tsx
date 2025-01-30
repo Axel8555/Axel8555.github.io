@@ -41,7 +41,7 @@ const projects: Project[] = [
 
 export default function Proyects() {
   return (
-    <section className="space-y-6">
+    <section className="space-y-6  pb-8">
       <h2 className="text-3xl font-semibold text-center">Featured Projects</h2>
       <div className="grid md:grid-cols-2 gap-6">
         {projects.map((project, index) => (

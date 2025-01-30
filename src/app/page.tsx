@@ -5,7 +5,7 @@ import Proyects from '@/components/Proyects'
 import Stack from '@/components/Stack'
 import GithubActivity from '@/components/GithubActivity'
 import cvData from '@/data/cvData_en.json'
-import AboutMe from '@/components/AboutMe'
+import Link from 'next/link'
 
 export const metadata = {
     title: 'Leonardo Axel Ortiz Zaragoza',
@@ -17,10 +17,9 @@ export default function Page() {
     return (
         <>
             <Header data={cvData.header} />
-            <Stack></Stack>
-            <Proyects></Proyects>
+            <Stack />
+            <Proyects />
             <GithubActivity />
-            <AboutMe />
         </>
     )
 }
