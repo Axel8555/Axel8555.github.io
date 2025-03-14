@@ -12,21 +12,23 @@ interface PageTransitionProps {
 const variants = {
     hidden: { opacity: 0, y: 10 },
     enter: { opacity: 1, y: 0 },
-    exit: { opacity: 0, y: -10 },
 }
 
 export default function PageTransition({ children }: PageTransitionProps) {
     const pathname = usePathname()
 
     return (
-        <AnimatePresence mode="wait" initial={false}>
+        <AnimatePresence mode="wait" initial={true}>
             <motion.div
                 key={pathname}
                 variants={variants}
                 initial="hidden"
                 animate="enter"
-                exit="exit"
-                transition={{ type: 'linear' }}
+                transition={{
+                    type: 'tween',
+                    ease: 'easeInOut',
+                    duration: 0.3,
+                }}
                 className="flex-1"
             >
                 {children}

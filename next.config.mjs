@@ -4,6 +4,13 @@ const nextConfig = {
   distDir: "out", // Directorio de salida es "/out"
   trailingSlash: true, // Agregar una barra al final de las rutas, ejemplo /about/
   images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'ghchart.rshah.org',
+        pathname: '**',
+      },
+    ],
     unoptimized: true, // Desactiva la optimización de imágenes
   }, // Deshabilitar la optimización de imágenes
 

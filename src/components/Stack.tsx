@@ -96,7 +96,7 @@ export function CategoryTabs({
         const interval = setInterval(() => {
             currentIndex = (currentIndex + 1) % categoryNames.length
             setActiveTab(categoryNames[currentIndex])
-        }, 5000)
+        }, 15000)
 
         return () => clearInterval(interval)
     }, [activeTab, setActiveTab, tabContent])

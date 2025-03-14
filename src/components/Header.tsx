@@ -1,4 +1,5 @@
 'use client'
+
 import Image from 'next/image'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
@@ -6,22 +7,25 @@ import { Mail, Terminal } from 'lucide-react'
 import Languages from './Languages'
 import { ModeToggle } from './ModeToggle'
 import { LuGithub, LuLinkedin } from 'react-icons/lu'
+import AnimatedEllipsis from './AnimatedEllipsis'
+import { usePathname } from 'next/navigation'
 
 export default function Page({
-    data: { name, title },
+    data,
 }: {
     data: {
         name: string
         title: string
     }
 }) {
+    const pathname = usePathname()
     return (
         <>
-            <div className="flex items-center justify-center gap-4 md:justify-start">
+            <div className="flex items-center justify-center gap-4 md:justify-end">
                 <Languages />
                 <ModeToggle />
             </div>
-            <header className="flex flex-col items-center justify-between gap-6 md:flex-row">
+            <header className="flex flex-col items-center justify-center gap-6 space-y-8 md:flex-row md:justify-between">
                 <div className="space-y-4 text-center md:text-left">
                     <h1 className="bg-gradient-to-r from-indigo-600 to-blue-400 bg-clip-text text-4xl font-bold text-transparent md:text-5xl">
                         Leonardo Axel Ortiz
@@ -29,7 +33,7 @@ export default function Page({
                     <p className="text-xl text-slate-950 dark:text-slate-50">
                         Fullstack Developer & Computer Systems Engineer
                     </p>
-                    <div className="flex justify-center gap-4 md:justify-start">
+                    <div className="flex flex-wrap justify-center gap-4 md:justify-start">
                         <Link href="https://github.com/Axel8555" passHref>
                             <Button
                                 size="sm"
@@ -40,7 +44,7 @@ export default function Page({
                                 GitHub
                             </Button>
                         </Link>
-                        <Link href="https://linkedin.com/in/laoz8555n" passHref>
+                        <Link href="https://linkedin.com/in/laoz8555" passHref>
                             <Button
                                 size="sm"
                                 variant="outline"
@@ -63,6 +67,29 @@ export default function Page({
                                 Email
                             </Button>
                         </Link>
+                        {pathname === '/' ? (
+                            <Link href="/about-me" passHref>
+                                <Button
+                                    size="sm"
+                                    variant="default"
+                                    className="rounded-full border border-secondary"
+                                >
+                                    <AnimatedEllipsis className="mb-2 mr-1 h-4 w-4" />
+                                    About Me
+                                </Button>
+                            </Link>
+                        ) : (
+                            <Link href="/" passHref>
+                                <Button
+                                    size="sm"
+                                    variant="default"
+                                    className="rounded-full border border-secondary"
+                                >
+                                    <Terminal className="mr-2 h-4 w-4" />
+                                    Home
+                                </Button>
+                            </Link>
+                        )}
                     </div>
                 </div>
                 <div className="relative">

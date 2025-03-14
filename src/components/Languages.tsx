@@ -23,7 +23,7 @@ export default function Languages() {
                     <Link href="/en/">English</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem>
-                    <Link href="/es/">Español</Link>
+                    <Link href="/es/">Español (WIP)</Link>
                 </DropdownMenuItem>
             </DropdownMenuContent>
         </DropdownMenu>

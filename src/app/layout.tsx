@@ -6,6 +6,8 @@ import '@/styles/font-styles.css'
 import Background from '@/components/Background'
 import { ThemeProvider } from '@/components/ThemeProvider'
 import PageTransition from '@/components/PageTransition'
+import Header from '@/components/Header'
+import cvData from '@/data/cvData_en.json'
 
 export const metadata = {
     title: 'Leonardo Axel Ortiz Zaragoza',
@@ -28,8 +30,14 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                 >
                     <Background />
                     <div className="flex flex-col gap-4 px-[10%] py-8">
+                        <Header data={cvData.header} />
                         <PageTransition>{children}</PageTransition>
                     </div>
+                    <footer className="py-4 text-center">
+                        <p className="text-secondary-foreground">
+                            leonardoaxelortiz@gmail.com
+                        </p>
+                    </footer>
                 </ThemeProvider>
             </body>
         </html>

@@ -32,7 +32,7 @@ export function ModeToggle() {
                     onClick={() => setTheme('system')}
                     className={bg(isActive('system'))}
                 >
-                    Systems
+                    System
                 </DropdownMenuItem>
                 <DropdownMenuItem
                     onClick={() => setTheme('light')}
