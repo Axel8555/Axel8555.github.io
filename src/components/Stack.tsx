@@ -103,7 +103,6 @@ export function CategoryTabs({
 
     return (
         <section className="flex w-full max-w-full flex-row items-center justify-between space-x-4 py-4 pt-2">
-            {/* Botón izquierdo con tamaño fijo */}
             <Button
                 onClick={handlePrev}
                 className="mt-0.5 self-start rounded-full"
@@ -112,34 +111,28 @@ export function CategoryTabs({
             >
                 <FaArrowLeft size={20} />
             </Button>
-
-            {/* Contenedor de Tabs ajustable */}
             <Tabs
                 value={activeTab}
                 onValueChange={setActiveTab}
-                className="max-w-[calc(100%-56px-56px)] flex-1" // Ajusta el ancho máximo restando 40px
+                className="max-w-[calc(100%-56px-56px)] flex-1"
             >
-                {/* ScrollArea para el contenido desplazable */}
                 <ScrollArea className="flex flex-1 overflow-x-auto rounded-lg">
                     <TabsList className="w-max flex-1 space-x-4">
                         {tabContent.map((category) => (
                             <TabsTrigger
                                 key={category.name}
                                 value={category.name}
-                                className="min-w-[100px]" // Tamaño fijo para los botones
+                                className="min-w-[100px]"
                             >
                                 {category.name}
                             </TabsTrigger>
                         ))}
                     </TabsList>
                 </ScrollArea>
-
                 {tabContent.map((category) => (
                     <CategoryContent key={category.name} category={category} />
                 ))}
             </Tabs>
-
-            {/* Botón derecho con tamaño fijo */}
             <Button
                 onClick={handleNext}
                 className="mt-0.5 self-start rounded-full"

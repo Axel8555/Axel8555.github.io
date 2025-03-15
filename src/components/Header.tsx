@@ -68,27 +68,32 @@ export default function Page({
                             </Button>
                         </Link>
                         {pathname === '/' ? (
-                            <Link href="/about-me" passHref>
-                                <Button
-                                    size="sm"
-                                    variant="default"
-                                    className="rounded-full border border-secondary"
+                            <Button
+                                size="sm"
+                                variant="default"
+                                className="rounded-full border border-secondary"
+                                asChild
+                            >
+                                <Link
+                                    href="/about-me"
+                                    rel="noopener noreferrer"
                                 >
-                                    <AnimatedEllipsis className="mb-2 mr-1 h-4 w-4" />
-                                    About Me
-                                </Button>
-                            </Link>
+                                    More About Me
+                                    <AnimatedEllipsis className="mb-[0.5rem] ml-[-0.25rem] h-4 w-4" />
+                                </Link>
+                            </Button>
                         ) : (
-                            <Link href="/" passHref>
-                                <Button
-                                    size="sm"
-                                    variant="default"
-                                    className="rounded-full border border-secondary"
-                                >
+                            <Button
+                                size="sm"
+                                variant="default"
+                                className="rounded-full border border-secondary"
+                                asChild
+                            >
+                                <Link href="/" rel="noopener noreferrer">
                                     <Terminal className="mr-2 h-4 w-4" />
                                     Home
-                                </Button>
-                            </Link>
+                                </Link>
+                            </Button>
                         )}
                     </div>
                 </div>
