@@ -5,16 +5,12 @@ import { motion } from 'framer-motion'
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa'
 import { Button } from '@/components/ui/button'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
-import { Card, CardContent } from '@/components/ui/card'
 import { techStack } from '@/data/techStack'
 import { ScrollArea } from '@radix-ui/react-scroll-area'
-
-const iconSize = 24
+import TechCard from '@/components/cards/TechCard'
 
 interface Item {
     name: string
-    icon?: JSX.Element
-    color?: string
 }
 
 export interface Category {
@@ -41,22 +37,7 @@ function CategoryContent({ category }: CategoryProps) {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.3 }}
                     >
-                        <Card>
-                            <CardContent className="flex items-center justify-center space-x-3 p-4">
-                                {item.icon &&
-                                    React.cloneElement(item.icon, {
-                                        style: {
-                                            color: item.color,
-                                            fontSize: iconSize,
-                                            minWidth: iconSize,
-                                            minHeight: iconSize,
-                                        },
-                                    })}
-                                <span className="truncate whitespace-nowrap text-sm">
-                                    {item.name}
-                                </span>
-                            </CardContent>
-                        </Card>
+                        <TechCard icon={item.name} />
                     </motion.div>
                 ))}
             </div>

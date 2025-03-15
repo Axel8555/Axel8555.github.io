@@ -9,8 +9,9 @@ import {
     CardFooter,
 } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
-import { Badge, ExternalLink } from 'lucide-react'
+import { ExternalLink } from 'lucide-react'
 import Link from 'next/link'
+import TechCard from '@/components/cards/TechCard'
 
 interface Project {
     title: string
@@ -169,7 +170,7 @@ export default function Proyects() {
                             </CardContent>
                             <CardFooter className="flex max-h-fit flex-grow flex-wrap gap-2">
                                 {project.techStack.map((tech, i) => (
-                                    <span key={i}>{tech}</span>
+                                    <TechCard icon={tech} key={i} />
                                 ))}
                             </CardFooter>
                         </Card>
