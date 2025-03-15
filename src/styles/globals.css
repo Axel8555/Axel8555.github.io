@@ -1,259 +1,111 @@
+/* Estilos de Tailwind CSS */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --color-primary: #1A73E8;
-  --color-secondary: #4D34A8;
-  --color-ternary: #81D9FA;
-  --color-light: #fff;
-  --color-dark: #333;
-  --font-family:'Nunito', Arial, Helvetica, sans-serif;
-  --font-size-small: 16px;
-  --font-size-medium: 20px;
-  --font-size-large: 48px;
-  --font-main-title: 700 var(--font-size-large) var(--font-family);
-  --font-main-subtitle: 700 var(--font-size-medium) var(--font-family);
-  --font-title: 700 var(--font-size-medium) var(--font-family);
-  
-  --default-box-shadow: 0px 0px 7px 3px rgba(0, 0, 0, 0.25);;
-
-  --background-gradient: linear-gradient(
-    110deg,
-    var(--color-ternary) 0%,
-    var(--color-ternary) 33.33%,
-    var(--color-secondary) 33.33%,
-    var(--color-secondary) 66.66%,
-    var(--color-primary) 66.66%
-  );
+/* Estilos de shadcn/ui */
+@layer base {
+    :root {
+        --background: 0 0% 100%;
+        --foreground: 240 10% 3.9%;
+        --card: 0 0% 100%;
+        --card-foreground: 240 10% 3.9%;
+        --popover: 0 0% 100%;
+        --popover-foreground: 240 10% 3.9%;
+        --primary: 240 5.9% 10%;
+        --primary-foreground: 0 0% 98%;
+        --secondary: 240 4.8% 95.9%;
+        --secondary-foreground: 240 5.9% 10%;
+        --muted: 240 4.8% 95.9%;
+        --muted-foreground: 240 3.8% 46.1%;
+        --accent: 240 4.8% 95.9%;
+        --accent-foreground: 240 5.9% 10%;
+        --destructive: 0 84.2% 60.2%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 240 5.9% 90%;
+        --input: 240 5.9% 90%;
+        --ring: 240 10% 3.9%;
+        --chart-1: 12 76% 61%;
+        --chart-2: 173 58% 39%;
+        --chart-3: 197 37% 24%;
+        --chart-4: 43 74% 66%;
+        --chart-5: 27 87% 67%;
+        --radius: 0.5rem;
+    }
+    .dark {
+        --background: 240 10% 3.9%;
+        --foreground: 0 0% 98%;
+        --card: 240 10% 3.9%;
+        --card-foreground: 0 0% 98%;
+        --popover: 240 10% 3.9%;
+        --popover-foreground: 0 0% 98%;
+        --primary: 0 0% 98%;
+        --primary-foreground: 240 5.9% 10%;
+        --secondary: 240 3.7% 15.9%;
+        --secondary-foreground: 0 0% 98%;
+        --muted: 240 3.7% 15.9%;
+        --muted-foreground: 240 5% 64.9%;
+        --accent: 240 3.7% 15.9%;
+        --accent-foreground: 0 0% 98%;
+        --destructive: 0 62.8% 30.6%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 240 3.7% 15.9%;
+        --input: 240 3.7% 15.9%;
+        --ring: 240 4.9% 83.9%;
+        --chart-1: 220 70% 50%;
+        --chart-2: 160 60% 45%;
+        --chart-3: 30 80% 55%;
+        --chart-4: 280 65% 60%;
+        --chart-5: 340 75% 55%;
+    }
+}
+@layer base {
+    * {
+        @apply border-border;
+    }
+    body {
+        @apply bg-background text-foreground;
+    }
+}
+@keyframes bounce {
+    0%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.dot {
+    font-size: 1.5rem;
+    opacity: 0.85;
+    animation: bounce 1.8s ease-in-out infinite;
 }
 
-.bg {
-  animation:slide 30s ease-in-out infinite alternate;
-  background-image: linear-gradient(-60deg, var(--color-ternary) 50%, var(--color-primary) 50%);
-  bottom:0;
-  left:-50%;
-  opacity:.5;
-  position:fixed;
-  right:-50%;
-  top:0;
-  z-index:-1;
+@keyframes bounce {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-2px);
+    }
+    60% {
+        transform: translateY(-1px);
+    }
 }
 
-.bg2 {
-  animation-direction:alternate-reverse;
-  animation-duration:29s;
+.animate-dot1 {
+    animation-delay: 0s;
 }
-
-.bg3 {
-  animation-duration:37s;
+.animate-dot2 {
+    animation-delay: 0.15s;
 }
-@keyframes slide {
-  0% {
-    transform:translateX(-25%);
-  }
-  100% {
-    transform:translateX(25%);
-  }
-}
-
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}
-
-
-header {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  gap: 15px;
-  
-  align-items: center;
-  
-  justify-content: space-between;
-}
-
-
-.main-title {
-  line-height: normal;
-}
-
-h1 {
-  color: var(--color-dark);
-  text-transform: capitalize;
-  font: var(--font-main-title);
-}
-
-h3 {
-  color: var(--color-light);
-  text-transform: uppercase;
-  font: var(--font-main-subtitle);
-}
-
-
-.profile-picture {
-  aspect-ratio: 1!important;
-  border-radius: 50%;
-  width: 200px!important;
-  box-shadow: var(--default-box-shadow);
-
-}
-.container-profile-picture { 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  aspect-ratio: 1;
-  width: fit-content;
-  height: fit-content;
-  border-radius: 50%;
-  padding: 10px;
-  border: 10px solid var(--color-secondary);
-  box-shadow: var(--default-box-shadow);
-}
-
-
-/* Asumiendo que quieres añadir area0 a tu grid */
-main {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr; 
-  grid-template-rows: auto auto 1fr; 
-  grid-template-areas: 
-    "area0 area0 area0"
-    "area2 area1 area1"
-    "area3 area1 area1";
-  gap: 15px;
-  text-align: justify; /* Add this line to justify the text */
-}
-
-.area0-important {
-  grid-area: area0 !important;
-}
-
-.area3-important {
-  grid-area: area3 !important;
-}
-aside {
-  grid-area: area2;
-  display: flex;
-  flex-direction: column;
-  line-height: normal;
-  flex-grow: 1;
-  gap: 15px;
-  color: var(--color-dark);
-}
-
-article {
-  grid-area: area1;
-  display: flex;
-  flex-direction: column;
-  line-height: normal;
-  flex-grow: 1;
-  gap: 15px;
-  color: var(--color-dark);
-}
-
-section {
-  border-radius: 8px;
-  box-shadow: var(--default-box-shadow);
-  background-color: var(--color-light);
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  padding: 30px 30px;
-}
-
-h2 {
-  border-bottom: 5px solid var(--color-secondary);
-  text-transform: uppercase;
-  font: var(--font-title);
-}
-h4 {
-  font-weight: 700;
-}
-p {
-}
-ol{
-  list-style-type: decimal;
-  list-style-position: outside;
-  padding-inline-start: 2em;
-}
-ul{
-  list-style-type: disc;
-  list-style-position: outside;
-  padding-inline-start: 2em;
-}
-li{
-  display: list-item;
-  text-align: -webkit-match-parent;
-}
-a {
-  text-decoration: none;
-  color: #000;
-}
-a:hover {
-  text-decoration-line: underline;
-  text-decoration-style: dotted;
-}
-
-.social-media {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  justify-content: center;
-  font-size: 14px;
-  border-radius: 8px;
-  color: var(--color-dark);
-  padding: 5px;
-  text-align: center;
-  gap: 5x;
-  transition: background-color 0.3s ease
-}
-.social-media:hover{
-  background-color: var(--color-ternary);
-}
-.social-media:active{
-  background-color: var(--color-primary);
-}
-.social-media-icon {
-  aspect-ratio: 1;
-  width: 30px;
-  align-self: center;
-}
-.social-media-text {
-  font-family: Nunito, sans-serif;
-}
-
-.upper {
-  text-transform: uppercase;
-  font-weight: bold;
-}
-.break {
-  display: block;
-}
-.bold {
-  font-weight: bold;
-}
-@media (max-width: 1100px) {
-  main {
-    grid-template-columns: 1fr; /* Esto cambia el layout a una sola columna */
-    grid-template-areas:
-      "area0"
-      "area2"
-      "area1"
-      "area3";
-  }
-  header {
-    flex-direction: column;
-  }
+.animate-dot3 {
+    animation-delay: 0.3s;
 }
